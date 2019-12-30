@@ -1,0 +1,14 @@
+[
+ { "op" : "add",
+ "path" : "/speciesShips/luxio",
+ "value" : [
+ "/ships/draikin/draikinT0.structure",
+ "/ships/draikin/draikinT1.structure",
+ "/ships/draikin/draikinT2.structure",
+ "/ships/draikin/draikinT3.structure",
+ "/ships/draikin/draikinT4.structure",
+ "/ships/draikin/draikinT5.structure",
+ "/ships/draikin/draikinT6.structure",
+ "/ships/draikin/draikinT7.structure",
+ "/ships/draikin/draikinT8.structure" ] }
+]

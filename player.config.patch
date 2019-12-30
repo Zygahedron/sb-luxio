@@ -1,0 +1,13 @@
+[
+ { "op" : "add",
+   "path" : "/species/-",
+   "value" : "luxio" },
+   
+ { "op" : "add",
+   "path" : "/defaultCodexes/luxio",
+   "value" : [ "protectorate1", "protectorate2" ] },
+   
+ { "op" : "add",
+   "path" : "/deploymentConfig/speciesStarterMechBody/luxio",
+   "value" : "mechbodydraikinproto" }
+]

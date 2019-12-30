@@ -1,0 +1,6 @@
+[
+ { "op" : "add",
+ "path" : "/initialquests/luxio",
+ "value" : [ "protectorate" ]
+ }
+]

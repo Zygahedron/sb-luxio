@@ -1,0 +1,9 @@
+[
+ { "op" : "add",
+ "path" : "/species/luxio",
+ "value" : {
+	"aiFrames" : "LuxioAI.png",
+	"portraitFrames" : "portraits/luxioportrait.png",
+	"staticFrames" : "staticLuxio.png" }
+ }
+]
