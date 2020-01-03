@@ -1,0 +1,23 @@
+{
+  "config" : {
+    "shipUpgrades" : {
+      "capabilities" : ["teleport", "planetTravel", "systemTravel"],
+      "crewSize" : 10
+    }
+  },
+
+  "backgroundOverlays" : [
+    {
+      "image" : "luxioT7.png",
+      "position" : [11.625, 17.375],
+      "fullbright" : true
+    },
+    {
+      "image" : "luxioT7lit.png",
+      "position" : [11.625, 17.375]
+    }
+  ],
+
+  "blockKey" : "blockKey.config:blockKey",
+  "blockImage" : "luxioT7blocks.png"
+}

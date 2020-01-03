@@ -2,13 +2,13 @@
  { "op" : "add",
  "path" : "/speciesShips/luxio",
  "value" : [
- "/ships/draikin/draikinT0.structure",
- "/ships/draikin/draikinT1.structure",
- "/ships/draikin/draikinT2.structure",
- "/ships/draikin/draikinT3.structure",
- "/ships/draikin/draikinT4.structure",
- "/ships/draikin/draikinT5.structure",
- "/ships/draikin/draikinT6.structure",
- "/ships/draikin/draikinT7.structure",
- "/ships/draikin/draikinT8.structure" ] }
+ "/ships/luxio/luxioT0.structure",
+ "/ships/luxio/luxioT1.structure",
+ "/ships/luxio/luxioT2.structure",
+ "/ships/luxio/luxioT3.structure",
+ "/ships/luxio/luxioT4.structure",
+ "/ships/luxio/luxioT5.structure",
+ "/ships/luxio/luxioT6.structure",
+ "/ships/luxio/luxioT7.structure",
+ "/ships/luxio/luxioT8.structure" ] }
 ]
