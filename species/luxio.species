@@ -131,8 +131,8 @@
       "hair" : ["blank"], // the 'hair' is technically facial hair so that it goes in front of the body
       "shirt" : [ "draikinbasicchest", "draikinflowerchest", "draikinringschest", "draikincasualchest", "draikinprotectoratecollarchest" ],
       "pants" : [ "draikinbasicpants", "draikinflowerpants", "draikinringspants", "draikincasualpants" ],
-      "facialHairGroup" : "hair",
-      "facialHair" : ["1"],
+      "facialHairGroup" : "malehair",
+      "facialHair" : ["1", "2", "3", "4"],
       "facialMaskGroup" : "",
       "facialMask" : [ ]
     },	
@@ -143,8 +143,8 @@
       "hair" : ["blank"],
       "shirt" : [ "draikinbasicchest", "draikinflowerchest", "draikinringschest", "draikincasualchest", "draikinprotectoratecollarchest" ],
       "pants" : [ "draikinbasicpants", "draikinflowerpants", "draikinringspants", "draikincasualpants" ],
-      "facialHairGroup" : "hair",
-      "facialHair" : ["1"],
+      "facialHairGroup" : "femalehair",
+      "facialHair" : ["1", "2", "3", "4"],
       "facialMaskGroup" : "",
       "facialMask" : [ ]
     }
