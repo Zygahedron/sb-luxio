@@ -1,0 +1,12 @@
+{
+  "input" : [
+    { "item" : "darkwoodmaterial", "count" : 70 },
+    { "item" : "silverbar", "count" : 5 },
+	{ "item" : "titaniumbar", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "luxiomannequin",
+  "count" : 1
+  },
+  "groups" : [ "craftingwheel2", "ingredients" ]
+}
