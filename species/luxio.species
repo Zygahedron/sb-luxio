@@ -7,11 +7,11 @@
   },
 
   "humanoidConfig": "/species/luxiobodyconfig.config",
-  "nameGen" : [ "/species/draikinmalenamegen.config:names", "/species/draikinfemalenamegen.config:names" ],
-  "ouchNoises" : [ "/sfx/draikin/draikinhurt_male.ogg", "/sfx/draikin/draikinhurt_female.ogg" ],
+  "nameGen" : [ "/species/luxiomalenamegen.config:names", "/species/luxiofemalenamegen.config:names" ],
+  "ouchNoises" : [ "/sfx/luxio/luxiohurt_male.ogg", "/sfx/luxio/luxiohurt_female.ogg" ],
   "charGenTextLabels" : [ "Main colors", "-", "Collar", "Clothes", "Hair shape", "Accent color", "Collar color", "Clothes color", "LUXIO", "Personality" ],
-  "skull" : "/humanoid/draikin/dead.png",
-  "effectDirectives" : "?replace=FEFFFFFF=FFFFFFFF?replace=9bd4ffFF=c3cfd2FF?replace=31a6ffFF=98acb3FF",
+  "skull" : "/humanoid/luxio/dead.png",
+  "effectDirectives" : "?replace=FEFFFFFF=DCC6FFFF?replace=9bd4ffFF=B168FBFF?replace=31a6ffFF=9529FF FF",
   "defaultBlueprints" : {
     "tier1" : [
       // Empty Hands
@@ -42,7 +42,7 @@
       { "item" : "titaniumspear" },
       { "item" : "durasteelbroadsword" },
       { "item" : "durasteelshortsword" },
-      { "item" : "titaniummachinepistol" },
+      { "item" : "titaniummachinepistol" }, 
       { "item" : "titaniumsniperrifle" },
       { "item" : "durasteelrevolver" },
       { "item" : "durasteelassaultrifle" },
@@ -119,6 +119,7 @@
     ]
   },
   "altOptionAsFacialMask" : true,
+  "altOptionAsUndyColor" : true,
   "headOptionAsHairColor" : true,
   "bodyColorAsFacialMaskSubColor": true,
   "hairColorAsBodySubColor": true,
@@ -170,7 +171,11 @@
     {"57a3b9": "784116", "70b9cf": "90501e", "418093": "653610", "363636": "1d1d1d", "454545": "282828", "232323": "000000"}
   ],
 
-  "undyColor" : [{}],
+  "undyColor" : [ {}
+    // would make ears blue vs black, but the color replacements go in the wrong order
+    // {"57a4b9": "57a3b9", "70bacf": "70b9cf", "418193": "418093"},
+    // {"57a4b9": "363636", "70bacf": "454545", "418193": "232323"}
+  ],
 
   "hairColor" : [
     {"c39839": "c39839", "efbc46": "efbc46", "9a7627": "9a7627"},
