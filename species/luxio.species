@@ -127,7 +127,7 @@
     {
       "name" : "male",
       "image" : "/interface/title/male.png",
-      "characterImage" : "/interface/title/draikinmale.png",
+      "characterImage" : "/interface/title/luxiomale.png",
       "hair" : ["blank"], // the 'hair' is technically facial hair so that it goes in front of the body
       "shirt" : [ "draikinbasicchest", "draikinflowerchest", "draikinringschest", "draikincasualchest", "draikinprotectoratecollarchest" ],
       "pants" : [ "draikinbasicpants", "draikinflowerpants", "draikinringspants", "draikincasualpants" ],
@@ -139,7 +139,7 @@
     {
       "name" : "female",
       "image" : "/interface/title/female.png",
-      "characterImage" : "/interface/title/draikinfemale.png",
+      "characterImage" : "/interface/title/luxiofemale.png",
       "hair" : ["blank"],
       "shirt" : [ "draikinbasicchest", "draikinflowerchest", "draikinringschest", "draikincasualchest", "draikinprotectoratecollarchest" ],
       "pants" : [ "draikinbasicpants", "draikinflowerpants", "draikinringspants", "draikincasualpants" ],
