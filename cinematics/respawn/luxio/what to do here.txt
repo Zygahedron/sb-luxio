@@ -1,0 +1,11 @@
+Here you will create the respawn for your race.
+If you don't want to modify or try to make one it's fine,
+you can just use the one we provided, it's the human one.
+
+There are 2 cinematic files, both will require some modification when you rename the files to a name that better suits your race.
+paths and replacement values:
+path                         replacement value
+/panels/3/drawables/0/image: /cinematics/respawn/<YourRaceId>/layer1.png:<frame>
+/panels/5/drawables/0/image: /cinematics/respawn/<YourRaceId>/layer2.png:<frame>
+
+Where <YourRaceId> is the kind/raceid you assinged to your species in your .species file.
