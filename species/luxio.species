@@ -11,7 +11,7 @@
   "ouchNoises" : [ "/sfx/luxio/luxiohurt_male.ogg", "/sfx/luxio/luxiohurt_female.ogg" ],
   "charGenTextLabels" : [ "Main colors", "-", "Collar", "Clothes", "Hair shape", "Accent color", "Collar color", "Clothes color", "LUXIO", "Personality" ],
   "skull" : "/humanoid/luxio/dead.png",
-  "effectDirectives" : "?replace=FEFFFFFF=DCC6FFFF?replace=9bd4ffFF=B168FBFF?replace=31a6ffFF=9529FF FF",
+  "effectDirectives" : "?replace=FEFFFFFF=DCC6FFFF?replace=9bd4ffFF=B168FBFF?replace=31a6ffFF=9529FFFF",
   "defaultBlueprints" : {
     "tier1" : [
       // Empty Hands
