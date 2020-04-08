@@ -8,7 +8,7 @@
 
   "humanoidConfig": "/species/luxiobodyconfig.config",
   "nameGen" : [ "/species/luxiomalenamegen.config:names", "/species/luxiofemalenamegen.config:names" ],
-  "ouchNoises" : [ "/sfx/luxio/luxiohurt_male.ogg", "/sfx/luxio/luxiohurt_female.ogg" ],
+  "ouchNoises" : [ "/sfx/luxio/luxiohurt.ogg", "/sfx/luxio/luxiohurt.ogg" ],
   "charGenTextLabels" : [ "Main colors", "-", "Collar", "Clothes", "Hair shape", "Accent color", "Collar color", "Clothes color", "LUXIO", "Personality" ],
   "skull" : "/humanoid/luxio/dead.png",
   "effectDirectives" : "?replace=FEFFFFFF=DCC6FFFF?replace=9bd4ffFF=B168FBFF?replace=31a6ffFF=9529FFFF",
@@ -42,7 +42,7 @@
       { "item" : "titaniumspear" },
       { "item" : "durasteelbroadsword" },
       { "item" : "durasteelshortsword" },
-      { "item" : "titaniummachinepistol" }, 
+      { "item" : "titaniummachinepistol" },
       { "item" : "titaniumsniperrifle" },
       { "item" : "durasteelrevolver" },
       { "item" : "durasteelassaultrifle" },
@@ -64,7 +64,7 @@
       { "item" : "draikintier5spants" },
       { "item" : "draikintier6shead" },
       { "item" : "draikintier6schest" },
-      { "item" : "draikintier6spants" },  
+      { "item" : "draikintier6spants" },
       { "item" : "aegisaltpistol" },
       { "item" : "aegisaltbow" },
       { "item" : "feroziumwand" },
@@ -135,7 +135,7 @@
       "facialHair" : [],
       "facialMaskGroup" : "malehair",
       "facialMask" : ["1", "2", "3", "4"]
-    },	
+    },
     {
       "name" : "female",
       "image" : "/interface/title/female.png",
