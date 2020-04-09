@@ -1,0 +1,42 @@
+{
+  "objectName" : "luxioshiplockerTier0",
+  "colonyTags" : ["luxio","storage"],
+  "printable" : false,
+  "rarity" : "Common",
+
+  "category" : "decorative",
+  "description" : "Store some stuff, why don't you?",
+  "shortdescription" : "Shiplocker",
+  "race" : "luxio",
+  "lightColor" : [82, 98, 102],
+
+  "apexDescription" : "A Glitch storage unit that has been modified by the luxio. It appears to be malfunctioning.",
+  "avianDescription" : "Looks like a modified Glitch storage locker. Sadly it seems broken.",
+  "floranDescription" : "luxio sstore goodiess in here. When itsss working.",
+  "glitchDescription" : "Distressed. This locker seems to be broken.",
+  "humanDescription" : "A modified Glitch storage locker. Its not working.",
+  "hylotlDescription" : "Storage. It's not currently powered.",
+  "novakidDescription" : "A locker, for puttin' things in. Shame this one is wrecked.",
+  "luxioDescription" : "Is ship storage. Not work.",
+
+  "inventoryIcon" : "shiplockericonTier0.png",
+  "orientations" : [
+    {
+      "image" : "luxioshiplockerTier0.png:<color>.<frame>",
+      "imagePosition" : [-16, -8],
+      "frames" : 8,
+      "animationCycle" : 1,
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+
+  "animation" : "/objects/noisy/noisy.animation",
+
+  "scripts" : [
+    "/objects/noisy/noisy.lua"
+  ],
+
+  "sounds" : [ "/sfx/interface/clickon_error.ogg" ]
+
+}
