@@ -9,12 +9,12 @@
   "backgroundOverlays" : [
     {
       "image" : "luxioT4.png",
-      "position" : [9, 26],
+      "position" : [-3, 20],
       "fullbright" : true
     },
     {
       "image" : "luxioT4lit.png",
-      "position" : [9, 26]
+      "position" : [-3, 20]
     }
   ],
 
