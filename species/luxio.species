@@ -6,6 +6,11 @@
     "description" : "[TODO] Luxio"
   },
 
+  "statusEffects" : [ "novakidglow" ],
+//  "humanoidOverrides" : {
+//    "bodyFullbright" : true
+//  },
+
   "humanoidConfig": "/species/luxiobodyconfig.config",
   "nameGen" : [ "/species/luxiomalenamegen.config:names", "/species/luxiofemalenamegen.config:names" ],
   "ouchNoises" : [ "/sfx/luxio/luxiohurt.ogg", "/sfx/luxio/luxiohurt.ogg" ],
