@@ -40,7 +40,7 @@
             "mode" : "transition",
             "transition" : "eatloop",
             "properties" : {
-                "immediateSound" : "/sfx/npc/smallbiped/bugthinghead_small_pain1.ogg"
+                "immediateSound" : "/sfx/npc/smallbiped/pachirisu_cry.ogg"
             }
           },
           "eatloop" : {
@@ -52,7 +52,7 @@
             "frames" : 4,
             "cycle" : 0.5,
             "properties" : {
-                "immediateSound" : "/sfx/npc/smallbiped/bugthinghead_small_pain2.ogg"
+                "immediateSound" : "/sfx/npc/smallbiped/pachirisu_cry.ogg"
             }
           },
           "swim" : {
