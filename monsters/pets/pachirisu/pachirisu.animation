@@ -66,9 +66,8 @@
             "transition" : "stand"
           },
           "sleep" : {
-            "frames" : 2,
+            "frames" : 3,
             "cycle" : 1,
-            "mode" : "loop"
           },
 
           "invisible" : {
