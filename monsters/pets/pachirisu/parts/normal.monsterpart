@@ -1,0 +1,6 @@
+{
+	"name" : "normal",
+	"category" : "pachirisu",
+	"type" : "body",
+	"frames" : { "body" : "normal.png" }
+}

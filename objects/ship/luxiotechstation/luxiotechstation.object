@@ -43,7 +43,7 @@
     "/objects/spawner/techstation.lua"
   ],
   "scriptDelta" : 20,
-  "shipPetType" : "snugget",
+  "shipPetType" : "pachirisu",
   "spawnOffset" : [2, -1],
 
   "chatPortrait" : "/ai/portraits/luxioportrait.png:yell.1",
