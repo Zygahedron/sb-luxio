@@ -93,7 +93,7 @@
    {
       "drawables" : [
         {
-          "image" : "/cinematics/respawn/smolavali/layer1.png:<frame>"
+          "image" : "/cinematics/respawn/luxio/layer1.png:<frame>"
         }
       ],
       "keyframes" : [
@@ -129,28 +129,28 @@
       "avatar" : "fullneutralnude",
       "keyframes" : [
         {
-          "timecode" : 3.5,
+          "timecode" :8,
           "zoom" : 1.5,
           "alpha" : 0,
           "frame" : 0,
           "position" : [478, 269]
         },
         {
-          "timecode" : 4,
+          "timecode" : 8.75,
           "zoom" : 1.5,
           "alpha" : 1,
           "frame" : 0,
           "position" : [478, 269]
         },
         {
-          "timecode" : 11.25,
+        "timecode" : 10.75,
           "zoom" : 1.5,
           "alpha" : 1,
           "frame" : 0,
           "position" : [478, 269]
         },
         {
-          "timecode" : 12,
+          "timecode" : 11.5,
           "alpha" : 0,
           "zoom" : 1.5,
           "frame" : 93.999
@@ -160,7 +160,7 @@
     {
       "drawables" : [
         {
-          "image" : "/cinematics/respawn/smolavali/layer2.png:<frame>"
+          "image" : "/cinematics/respawn/luxio/layer2.png:<frame>"
         }
       ],
       "keyframes" : [

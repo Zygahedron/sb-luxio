@@ -93,7 +93,7 @@
    {
       "drawables" : [
         {
-          "image" : "/cinematics/respawn/smolavali/layer1.png:<frame>"
+          "image" : "/cinematics/respawn/luxio/layer1.png:<frame>"
         }
       ],
       "keyframes" : [
@@ -160,7 +160,7 @@
     {
       "drawables" : [
         {
-          "image" : "/cinematics/respawn/smolavali/layer2.png:<frame>"
+          "image" : "/cinematics/respawn/luxio/layer2.png:<frame>"
         }
       ],
       "keyframes" : [
