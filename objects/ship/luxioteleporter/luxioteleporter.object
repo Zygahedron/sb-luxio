@@ -13,8 +13,7 @@
   "glitchDescription" : "Smug. A teleporter. I am able to enter a sleep mode during the teleport process.",
   "humanDescription" : "The teleporter! Teleporting is such a rush.",
   "hylotlDescription" : "A teleporter. Teleporting feels like diving into the ocean from a mountain top.",
-  "novakidDescription" : "Ship's teleporter. Let's take her for a spin!",
-  "luxioDescription" : "Is teleporter.",
+  "luxioDescription" : "Ship's teleporter. Let's take her for a spin!",
 
   "category" : "teleporter",
   "lightColor" : [99, 132, 153],
@@ -22,7 +21,7 @@
   "flickerStrength" : 0.05,
   "flickerTiming" : 4,
 
-  "particleEmitter" : {
+    "particleEmitter" : {
     "emissionRate" : 3,
     "emissionVariance" : 0.5,
 

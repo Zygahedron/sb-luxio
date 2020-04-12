@@ -7,7 +7,7 @@
   "interactAction" : "OpenAiInterface",
 
   "category" : "decorative",
-  "lightColor" : [103, 122, 128],
+  "lightColor" : [77, 111, 128],
   "lightPosition" : [-1, 0],
 
   "flickerDistance" : 1.0,
@@ -24,10 +24,9 @@
   "glitchDescription" : "Distressed. I first need to reboot this station to communicate with SAIL.",
   "humanDescription" : "If I can reboot this station SAIL should come back online!",
   "hylotlDescription" : "This console will allow me to communicate with SAIL. I need to reboot it first.",
-  "novakidDescription" : "Time to reboot this station so I can talk to SAIL.",
-  "luxioDescription" : "Is tech station. Needs reboot.",
+  "luxioDescription" : "Time to reboot this station so I can talk to SAIL.",
 
-  "inventoryIcon" : "luxiotechstationicon.png",
+  "inventoryIcon" : "luxiotechstationiconTier0.png",
   "orientations" : [
     {
       "imageLayers" : [ { "image" : "luxiotechstationTier0.png:<color>.<frame>", "fullbright" : true }, { "image" : "luxiotechstationlitTier0.png:<color>.<frame>" } ],

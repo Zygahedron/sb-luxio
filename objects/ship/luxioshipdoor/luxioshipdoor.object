@@ -15,8 +15,7 @@
   "glitchDescription" : "Informed. A standard ship door.",
   "humanDescription" : "A spaceship door.",
   "hylotlDescription" : "A basic ship door.",
-  "novakidDescription" : "A door, the type you'd find on a ship.",
-  "luxioDescription" : "Is ship door.",
+  "luxioDescription" : "A door, the type you'd find on a ship.",
 
   "inventoryIcon" : "luxioshipdooricon.png",
   "orientations" : [

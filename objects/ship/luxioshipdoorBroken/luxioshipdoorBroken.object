@@ -6,7 +6,7 @@
 
   "category" : "decorative",
   "description" : "A door suitable for a spaceship.",
-  "shortdescription" : "luxio Ship Door",
+  "shortdescription" : "Broken Ship Door",
   "race" : "luxio",
 
   "apexDescription" : "These doors are used on all our ships. This one is not playing nice.",
@@ -15,8 +15,7 @@
   "glitchDescription" : "Disappointed. A door. It appears to be disabled currently.",
   "humanDescription" : "Cool door. Too bad it isn't opening right now.",
   "hylotlDescription" : "A basic ship door. It won't open at the moment.",
-  "novakidDescription" : "The door is broken, it ain't opening any time soon.",
-  "luxioDescription" : "Is ship door. Not work.",
+  "luxioDescription" : "The door is broken, it ain't opening any time soon.",
 
   "inventoryIcon" : "luxioshipdoorBrokenicon.png",
   "orientations" : [

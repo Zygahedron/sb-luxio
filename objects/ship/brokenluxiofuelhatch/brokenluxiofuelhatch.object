@@ -7,7 +7,7 @@
   "description" : "A broken FTL fuel hatch. This won't do!",
   "shortdescription" : "Broken FTL Fuel Hatch",
   "race" : "luxio",
-  "lightColor" : [62, 74, 77],
+  "lightColor" : [46, 66, 77],
 
   "apexDescription" : "Converts fuel into freedom.",
   "avianDescription" : "Let's load it up and take to the stars!",
@@ -15,8 +15,7 @@
   "glitchDescription" : "Excited. Once filled, we may visit another planet.",
   "humanDescription" : "A fuel hatch. I can fill this up and explore.",
   "hylotlDescription" : "Fuel is the lifeblood of exploration.",
-  "novakidDescription" : "FTL fuel goes in here! When it's fixed...",
-  "luxioDescription" : "Is fuel hatch. Needs fix.",
+  "luxioDescription" : "FTL fuel goes in here! When it's fixed...",
 
   "inventoryIcon" : "fuelhatchicon.png",
   "orientations" : [
@@ -42,5 +41,4 @@
   ],
 
   "sounds" : [ "/sfx/interface/clickon_error.ogg" ]
-
 }

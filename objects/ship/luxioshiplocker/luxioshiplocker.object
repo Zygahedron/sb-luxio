@@ -8,18 +8,17 @@
 
   "category" : "storage",
   "description" : "A locker. Store some stuff, why don't you?",
-  "shortdescription" : "Shiplocker",
+  "shortdescription" : "Ship Locker",
   "race" : "luxio",
-  "lightColor" : [82, 98, 102],
+  "lightColor" : [61, 88, 102],
 
-  "apexDescription" : "A Glitch storage unit that has been modified by the luxio.",
-  "avianDescription" : "Looks like a modified Glitch storage locker.",
-  "floranDescription" : "Reminds Floran of Glitch sstorage.",
-  "glitchDescription" : "Intrigued. Why have the luxio chosen to modify Glitch technology?",
-  "humanDescription" : "A modified Glitch storage locker. The luxio really like precious stones.",
-  "hylotlDescription" : "The luxio have made improvements to Glitch technology.",
-  "novakidDescription" : "A locker, for puttin' things in.",
-  "luxioDescription" : "Is ship storage.",
+  "apexDescription" : "I wonder if there are any secrets inside this locker?",
+  "avianDescription" : "Could there be anything of value within this locker?",
+  "floranDescription" : "Floran ssearch luxio locker for valuabless.",
+  "glitchDescription" : "Excited. Any items of interest inside I wonder?",
+  "humanDescription" : "A ship's locker.",
+  "hylotlDescription" : "Perhaps something useful is inside this locker.",
+  "luxioDescription" : "A safe place to store my loot.",
 
   "inventoryIcon" : "shiplockericon.png",
   "orientations" : [

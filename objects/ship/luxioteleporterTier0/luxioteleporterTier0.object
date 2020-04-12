@@ -15,8 +15,7 @@
   "glitchDescription" : "Disappointed. A teleporter without power. I need to power it up.",
   "humanDescription" : "The teleporter! Too bad it isn't powered up.",
   "hylotlDescription" : "This teleporter is off.",
-  "novakidDescription" : "Ship's teleporter. I need to power her up!",
-  "luxioDescription" : "Needs power.",
+  "luxioDescription" : "Ship's teleporter. I need to power her up!",
 
   "objectType" : "loungeable",
   "sitFlipDirection" : true,

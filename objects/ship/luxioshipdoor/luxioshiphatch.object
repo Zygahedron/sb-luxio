@@ -15,8 +15,7 @@
   "glitchDescription" : "Informed. A standard ship hatch.",
   "humanDescription" : "A spaceship hatch.",
   "hylotlDescription" : "A basic ship hatch.",
-  "novakidDescription" : "A hatch, the type you'd find on a ship.",
-  "luxioDescription" : "Is ship hatch.",
+  "luxioDescription" : "A hatch, the type you'd find on a ship.",
 
   "inventoryIcon" : "luxioshiphatchicon.png",
   "orientations" : [
