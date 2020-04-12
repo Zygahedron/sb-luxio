@@ -1,0 +1,16 @@
+timecode        [      ][      ][      ][      ][      ][      ][      ][      ][      ][      ][      ][   >>>>
+esc to skip           [                                                                            ]
+10% pixels lost                                       [                :                           ]
+portrait 1?                                                                                          <    >>>>>>
+layer 1                     <<<<<<<<                                                                    >>>>
+portrait 2?                                                                             <<            >>>>>>
+layer 2                     <<<<<<<<                                                                    >>>>>>
+
+timecode        [      ][      ][      ][      ][      ][      ][      ][      ][      ][      ][      ][   >>>>
+esc to skip           [                                                                            ]
+dropped pixels      [        :     ]
+blacked out                           [        :      >>
+text arrow                     [   ]             [   ]
+healing machine                                             <<<<                >>>>>>>>
+pokeball                                                          [                        :       ]
+portrait                                                                                        [         >>>>>>
