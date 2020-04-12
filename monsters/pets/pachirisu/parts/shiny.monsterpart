@@ -1,0 +1,6 @@
+{
+	"name" : "shiny",
+	"category" : "pachirisu",
+	"type" : "body",
+	"frames" : { "body" : "shiny.png" }
+}
