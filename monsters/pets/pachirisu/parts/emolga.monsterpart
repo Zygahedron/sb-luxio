@@ -1,0 +1,6 @@
+{
+	"name" : "emolga",
+	"category" : "pachirisu",
+	"type" : "body",
+	"frames" : { "body" : "emolga.png" }
+}
