@@ -67,7 +67,7 @@
           },
           "sleep" : {
             "frames" : 3,
-            "cycle" : 1,
+            "cycle" : 1
           },
 
           "invisible" : {
