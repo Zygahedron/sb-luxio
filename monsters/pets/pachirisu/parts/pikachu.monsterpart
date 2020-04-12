@@ -1,0 +1,6 @@
+{
+	"name" : "pikachu",
+	"category" : "pachirisu",
+	"type" : "body",
+	"frames" : { "body" : "pikachu.png" }
+}
