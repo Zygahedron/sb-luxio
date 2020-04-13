@@ -1,0 +1,6 @@
+{
+	"name" : "morpeko",
+	"category" : "pachirisu",
+	"type" : "body",
+	"frames" : { "body" : "morpeko.png" }
+}
