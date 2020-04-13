@@ -1,0 +1,6 @@
+{
+	"name" : "minun",
+	"category" : "pachirisu",
+	"type" : "body",
+	"frames" : { "body" : "minun.png" }
+}

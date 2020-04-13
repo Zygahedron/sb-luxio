@@ -1,0 +1,6 @@
+{
+	"name" : "plusle",
+	"category" : "pachirisu",
+	"type" : "body",
+	"frames" : { "body" : "plusle.png" }
+}
