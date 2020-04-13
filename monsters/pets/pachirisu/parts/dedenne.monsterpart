@@ -1,0 +1,6 @@
+{
+	"name" : "dedenne",
+	"category" : "pachirisu",
+	"type" : "body",
+	"frames" : { "body" : "dedenne.png" }
+}
