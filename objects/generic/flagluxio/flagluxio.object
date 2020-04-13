@@ -7,7 +7,7 @@
   "category" : "teleportMarker",
   "price" : 70,
   "radioMessagesOnPickup" : [ "pickupflag" ],
-  
+
   "description" : "The flag of the Luxio. Use ^green;[E]^white; to bookmark a teleportation location.",
   "shortdescription" : "Luxio Flag",
   "race" : "luxio",
@@ -19,7 +19,7 @@
   "humanDescription" : "This Luxio flag can be saved as a location for my teleporter. Then I can return to it at any time.",
   "hylotlDescription" : "This Luxio flag can act as a way point, enabling me to return to this point using a teleporter.",
   "novakidDescription" : "I can bookmark this Luxio flag for quick teleportin'.",
-  "draikinDescription" : "Is Luxio flag.",
+  "luxioDescription" : "Is Luxio flag.",
 
   "interactAction" : "OpenTeleportDialog",
   "interactData" : "/interface/warping/destinationonly.config",
