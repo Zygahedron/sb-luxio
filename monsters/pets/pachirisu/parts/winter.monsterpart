@@ -1,0 +1,6 @@
+{
+	"name" : "winter",
+	"category" : "pachirisu",
+	"type" : "body",
+	"frames" : { "body" : "winter.png" }
+}
