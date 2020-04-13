@@ -1,0 +1,6 @@
+{
+	"name" : "togedemaru",
+	"category" : "pachirisu",
+	"type" : "body",
+	"frames" : { "body" : "togedemaru.png" }
+}
