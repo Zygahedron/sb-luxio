@@ -1,0 +1,6 @@
+{
+	"name" : "inverse",
+	"category" : "pachirisu",
+	"type" : "body",
+	"frames" : { "body" : "inverse.png" }
+}

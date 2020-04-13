@@ -1,0 +1,6 @@
+{
+	"name" : "inverse_shiny",
+	"category" : "pachirisu",
+	"type" : "body",
+	"frames" : { "body" : "inverse_shiny.png" }
+}
