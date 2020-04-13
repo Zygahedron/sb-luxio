@@ -1,0 +1,9 @@
+{
+  "input" : [
+    { "item" : "solariumstar", "count" : 20 },
+    { "item" : "luxiotier5schest", "count" : 1 }
+  ],
+  "duration" : 5,
+  "output" : { "item" : "luxiotier6schest", "count" : 1 },
+  "groups" : [ "craftingseparator", "armours", "all" ]
+}
