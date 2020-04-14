@@ -5,8 +5,8 @@
   "maxStack" : 1,
   "rarity" : "Uncommon",
   "category" : "chestarmour",
-  "description" : "Durable and lightweight.",
-  "shortdescription" : "Light Collar",
+  "description" : "A collar with a Scizor mark.",
+  "shortdescription" : "Scizor Collar",
   "tooltipKind" : "armor",
 
   "maleFrames" : {

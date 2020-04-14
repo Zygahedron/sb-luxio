@@ -5,8 +5,8 @@
   "maxStack" : 1,
   "rarity" : "Uncommon",
   "category" : "headarmour",
-  "description" : "Blind them with the light!",
-  "shortdescription" : "Light Helm",
+  "description" : "Pretty aesthetic ain't it?",
+  "shortdescription" : "Scizor Helmet",
   "tooltipKind" : "armor",
 
   "maleFrames" : "head.png",
