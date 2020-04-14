@@ -99,7 +99,7 @@
       "characterImage" : "/interface/title/luxiomale.png",
       "hair" : ["blank"], // the 'hair' is technically facial hair so that it goes in front of the body
       "shirt" : [ "maskchest" ],
-      "pants" : [ "maskpants" ],
+      "pants" : [ "maskpants", "woulditbelikethispants", "orthispants" ],
       "facialHairGroup" : "",
       "facialHair" : [],
       "facialMaskGroup" : "malehair",
@@ -111,7 +111,7 @@
       "characterImage" : "/interface/title/luxiofemale.png",
       "hair" : ["blank"],
       "shirt" : [ "maskchest" ],
-      "pants" : [ "maskpants" ],
+      "pants" : [ "maskpants", "woulditbelikethispants", "orthispants" ],
       "facialHairGroup" : "",
       "facialHair" : [],
       "facialMaskGroup" : "femalehair",

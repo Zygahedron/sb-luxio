@@ -6,7 +6,7 @@
   "rarity" : "Common",
   "category" : "legarmour",
   "description" : "Armour worn by the lowest ranking warriors.",
-  "shortdescription" : "luxiotier1pants",
+  "shortdescription" : "Iron Luxio Armor",
   "tooltipKind" : "armor",
 
   "maleFrames" : "pants.png",
