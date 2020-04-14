@@ -120,7 +120,7 @@
       "dummyBody" : {
         "properties" : {
           "centered" : false,
-          "offset" : [0, 0.125],
+          "offset" : [-1, -0.25],
           "zLevel" : 5,
           "image" : "/humanoid/any/luxiodummybody.png"
         }
@@ -128,7 +128,7 @@
       "legs" : {
         "properties" : {
           "centered" : false,
-          "offset" : [0, 0.125],
+          "offset" : [-1, -0.25],
           "zLevel" : 6
         },
 
