@@ -1,12 +1,12 @@
 {
-  "itemName" : "luxiokneesocksstripedblack",
+  "itemName" : "luxiokneesocksblackstriped",
   "price" : 50,
   "inventoryIcon" : "icons.png:pants",
   "maxStack" : 1,
   "rarity" : "Common",
   "category" : "legarmour",
   "description" : "Likely to cause a paradox.",
-  "shortdescription" : "Striped Black Kneesocks",
+  "shortdescription" : "Black Striped Kneesocks",
   "tooltipKind" : "armor",
 
   "maleFrames" : "pants.png",
