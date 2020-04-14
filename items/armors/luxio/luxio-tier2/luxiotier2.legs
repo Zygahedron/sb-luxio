@@ -5,8 +5,8 @@
   "maxStack" : 1,
   "rarity" : "Common",
   "category" : "legarmour",
-  "description" : "Tungsten armour, superior to the iron Dim Warrior.",
-  "shortdescription" : "luxiotier2pants",
+  "description" : "You know there's only like, four fire type lines in sinnoh.",
+  "shortdescription" : "Doom Armor",
   "tooltipKind" : "armor",
 
   "maleFrames" : "pants.png",

@@ -5,8 +5,8 @@
   "maxStack" : 1,
   "rarity" : "Common",
   "category" : "chestarmour",
-  "description" : "A collar made with durable tungsten.",
-  "shortdescription" : "luxiotier2chest",
+  "description" : "A skull collar, how edgy you must be.",
+  "shortdescription" : "Doom Collar",
   "tooltipKind" : "armor",
 
   "maleFrames" : {
