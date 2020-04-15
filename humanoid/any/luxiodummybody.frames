@@ -5,5 +5,8 @@
     "names" : [
       ["default"]
     ]
+  },
+  "aliases" : {
+    "idle.1" : "default"
   }
 }
