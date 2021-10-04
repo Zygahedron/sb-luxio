@@ -362,7 +362,36 @@
 
 					}
 				}
+			},
+			"hair": {
+				"properties": {
+					"centered": true,
+					"zLevel": 2.1,
+					"transformationGroups": ["flip", "headbob"]
+				},
+				"partStates": {
+					"headState": {
+						"none": { "properties": {} },
+
+						"idle": { "properties": { "image": "<partImage>:idle.<frame><directives>" } },
+
+						"duck": { "properties": { "image": "<partImage>:duck.<frame><directives>" } },
+						"sit": { "properties": { "image": "<partImage>:sit.<frame><directives>" } },
+						"lay": { "properties": { "image": "<partImage>:lay.<frame><directives>" } },
+
+						"walk": { "properties": { "image": "<partImage>:walk.<frame><directives>" } },
+						"run": { "properties": { "image": "<partImage>:run.<frame><directives>" } },
+
+						"jump": { "properties": { "image": "<partImage>:jump.<frame><directives>" } },
+						"fall": { "properties": { "image": "<partImage>:fall.<frame><directives>" } },
+
+						"swim": { "properties": { "image": "<partImage>:swim.<frame><directives>" } },
+						"swimIdle": { "properties": { "image": "<partImage>:swimIdle.<frame><directives>" } }
+
+					}
+				}
 			}
+
 		}
 	},
 	"transformationGroups": {
