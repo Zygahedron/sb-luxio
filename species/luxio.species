@@ -6,7 +6,7 @@
     "description" : "[TODO] Luxio"
   },
 
-  "statusEffects" : [ "novakidglow" ],
+  "statusEffects" : [ "novakidglow", "speciesAnimOverride" ],
 //  "humanoidOverrides" : {
 //    "bodyFullbright" : true
 //  },

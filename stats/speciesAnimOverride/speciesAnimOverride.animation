@@ -1,0 +1,390 @@
+{
+	"globalTagDefaults" : {
+	},
+	"animatedParts": {
+		/*
+		the timings here should mostly match the ones in humanoid config, if your species has different timing or has
+		parts I did not define here then you should create a duplicate status effect that points to an animation file
+		with the correct timings and parts
+		*/
+		"stateTypes": {
+			"bodyState": {
+				"default": "idle",
+				"states": {
+					"none": { "frames": 1, "cycle": 1, "mode": "end", "priority": -1 },
+
+					"idle": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+					"duck": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+					"sit": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+					"lay": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+
+					"walk": { "frames": 8, "cycle": 0.75, "mode": "loop", "priority": 0 },
+					"run": { "frames": 8, "cycle": 0.75, "mode": "loop", "priority": 0 },
+
+					"jump": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
+					"fall": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
+
+					"swim": { "frames": 7, "cycle": 0.50, "mode": "loop", "priority": 0 },
+					"swimIdle": { "frames": 2, "cycle": 0.50, "mode": "loop", "priority": 0 }
+
+				}
+			},
+			"armsState": {
+				"default": "idle",
+				"states": {
+					"none": { "frames": 1, "cycle": 1, "mode": "end", "priority": -1 },
+
+					"idle": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+					"duck": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+					"sit": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+					"lay": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+
+					"walk": { "frames": 8, "cycle": 0.75, "mode": "loop", "priority": 0 },
+					"run": { "frames": 8, "cycle": 0.75, "mode": "loop", "priority": 0 },
+
+					"jump": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
+					"fall": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
+
+					"swim": { "frames": 7, "cycle": 0.50, "mode": "loop", "priority": 0 },
+					"swimIdle": { "frames": 2, "cycle": 0.50, "mode": "loop", "priority": 0 }
+
+				}
+			},
+			"frontarmsRotationState": {
+				"default": "none",
+				"states": {
+					"none": { "frames": 1, "cycle": 1, "mode": "end", "priority": -1 },
+
+					"rotation": { "frames": 1, "cycle": 1, "mode": "end", "priority": 5 }
+				}
+			},
+			"backarmsRotationState": {
+				"default": "none",
+				"states": {
+					"none": { "frames": 1, "cycle": 1, "mode": "end", "priority": -1 },
+
+					"rotation": { "frames": 1, "cycle": 1, "mode": "end", "priority": 5 }
+				}
+			},
+
+			"legsState": {
+				"default": "none",
+				"states": {
+					"none": { "frames": 1, "cycle": 1, "mode": "end", "priority": -1 },
+
+					"idle": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+					"duck": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+					"sit": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+					"lay": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+
+					"walk": { "frames": 8, "cycle": 0.75, "mode": "loop", "priority": 0 },
+					"run": { "frames": 8, "cycle": 0.75, "mode": "loop", "priority": 0 },
+
+					"jump": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
+					"fall": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
+
+					"swim": { "frames": 7, "cycle": 0.50, "mode": "loop", "priority": 0 },
+					"swimIdle": { "frames": 2, "cycle": 0.50, "mode": "loop", "priority": 0 }
+				}
+			},
+			"tailState": {
+				"default": "none",
+				"states": {
+					"none": { "frames": 1, "cycle": 1, "mode": "end", "priority": -1 },
+
+					"idle": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+					"duck": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+					"sit": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+					"lay": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+
+					"walk": { "frames": 8, "cycle": 0.75, "mode": "loop", "priority": 0 },
+					"run": { "frames": 8, "cycle": 0.75, "mode": "loop", "priority": 0 },
+
+					"jump": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
+					"fall": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
+
+					"swim": { "frames": 7, "cycle": 0.50, "mode": "loop", "priority": 0 },
+					"swimIdle": { "frames": 2, "cycle": 0.50, "mode": "loop", "priority": 0 }
+
+				}
+			},
+			"headState": {
+				"default": "idle",
+				"states": {
+					"none": { "frames": 1, "cycle": 1, "mode": "end", "priority": -1 },
+
+					"idle": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+					"duck": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+					"sit": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+					"lay": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+
+					"walk": { "frames": 8, "cycle": 0.75, "mode": "loop", "priority": 0 },
+					"run": { "frames": 8, "cycle": 0.75, "mode": "loop", "priority": 0 },
+
+					"jump": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
+					"fall": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
+
+					"swim": { "frames": 7, "cycle": 0.50, "mode": "loop", "priority": 0 },
+					"swimIdle": { "frames": 2, "cycle": 0.50, "mode": "loop", "priority": 0 }
+				}
+			}
+		},
+		"parts": {
+			"body": {
+				"properties": {
+					"centered": true,
+					"zLevel": 0,
+					"transformationGroups": ["flip", "bodybob"]
+				},
+				"partStates": {
+					"bodyState": {
+						"none": { "properties": {} },
+
+						"idle": { "properties": { "image": "<partImage>:idle.<frame><directives>" } },
+
+						"duck": { "properties": { "image": "<partImage>:duck.<frame><directives>" } },
+						"sit": { "properties": { "image": "<partImage>:sit.<frame><directives>" } },
+						"lay": { "properties": { "image": "<partImage>:lay.<frame><directives>" } },
+
+						"walk": { "properties": { "image": "<partImage>:walk.<frame><directives>" } },
+						"run": { "properties": { "image": "<partImage>:run.<frame><directives>" } },
+
+						"jump": { "properties": { "image": "<partImage>:jump.<frame><directives>" } },
+						"fall": { "properties": { "image": "<partImage>:fall.<frame><directives>" } },
+
+						"swim": { "properties": { "image": "<partImage>:swim.<frame><directives>" } },
+						"swimIdle": { "properties": { "image": "<partImage>:swimIdle.<frame><directives>" } }
+
+					}
+				}
+			},
+			"frontarms": {
+				"properties": {
+					"centered": true,
+					"zLevel": 3,
+					"transformationGroups": ["flip", "armsbob"]
+				},
+				"partStates": {
+					"armsState": {
+						"none": { "properties": {} },
+
+						"idle": { "properties": { "image": "<partImage>:idle.<frame><directives>" } },
+
+						"duck": { "properties": { "image": "<partImage>:duck.<frame><directives>" } },
+						"sit": { "properties": { "image": "<partImage>:sit.<frame><directives>" } },
+						"lay": { "properties": { "image": "<partImage>:lay.<frame><directives>" } },
+
+						"walk": { "properties": { "image": "<partImage>:walk.<frame><directives>" } },
+						"run": { "properties": { "image": "<partImage>:run.<frame><directives>" } },
+
+						"jump": { "properties": { "image": "<partImage>:jump.<frame><directives>" } },
+						"fall": { "properties": { "image": "<partImage>:fall.<frame><directives>" } },
+
+						"swim": { "properties": { "image": "<partImage>:swim.<frame><directives>" } },
+						"swimIdle": { "properties": { "image": "<partImage>:swimIdle.<frame><directives>" } }
+
+
+					}
+				}
+			},
+			"frontarms_rotation": {
+				"properties": {
+					"centered": true,
+					"zLevel": 3,
+					"transformationGroups": ["flip", "armsbob"]
+				},
+				"partStates": {
+					"frontarmsRotationState": {
+						"none": { "properties": {} },
+
+						"rotation": { "properties": { "image": "<partImage>:rotation.<frame><directives>" } }
+
+					}
+				}
+			},
+			"backarms": {
+				"properties": {
+					"centered": true,
+					"zLevel": -3,
+					"transformationGroups": ["flip", "armsbob"]
+				},
+				"partStates": {
+					"armsState": {
+						"none": { "properties": {} },
+
+						"idle": { "properties": { "image": "<partImage>:idle.<frame><directives>" } },
+
+						"duck": { "properties": { "image": "<partImage>:duck.<frame><directives>" } },
+						"sit": { "properties": { "image": "<partImage>:sit.<frame><directives>" } },
+						"lay": { "properties": { "image": "<partImage>:lay.<frame><directives>" } },
+
+						"walk": { "properties": { "image": "<partImage>:walk.<frame><directives>" } },
+						"run": { "properties": { "image": "<partImage>:run.<frame><directives>" } },
+
+						"jump": { "properties": { "image": "<partImage>:jump.<frame><directives>" } },
+						"fall": { "properties": { "image": "<partImage>:fall.<frame><directives>" } },
+
+						"swim": { "properties": { "image": "<partImage>:swim.<frame><directives>" } },
+						"swimIdle": { "properties": { "image": "<partImage>:swimIdle.<frame><directives>" } }
+
+
+					}
+				}
+			},
+			"backarms_rotation": {
+				"properties": {
+					"centered": true,
+					"zLevel": -3,
+					"transformationGroups": ["flip", "armsbob"]
+				},
+				"partStates": {
+					"backarmsRotationState": {
+						"none": { "properties": {} },
+
+						"rotation": { "properties": { "image": "<partImage>:rotation.<frame><directives>" } }
+
+					}
+				}
+			},
+			"frontlegs": {
+				"properties": {
+					"centered": true,
+					"zLevel": 2,
+					"transformationGroups": ["flip", "legsbob"]
+				},
+				"partStates": {
+					"legsState": {
+						"none": { "properties": {} },
+
+						"idle": { "properties": { "image": "<partImage>:idle.<frame><directives>" } },
+
+						"duck": { "properties": { "image": "<partImage>:duck.<frame><directives>" } },
+						"sit": { "properties": { "image": "<partImage>:sit.<frame><directives>" } },
+						"lay": { "properties": { "image": "<partImage>:lay.<frame><directives>" } },
+
+						"walk": { "properties": { "image": "<partImage>:walk.<frame><directives>" } },
+						"run": { "properties": { "image": "<partImage>:run.<frame><directives>" } },
+
+						"jump": { "properties": { "image": "<partImage>:jump.<frame><directives>" } },
+						"fall": { "properties": { "image": "<partImage>:fall.<frame><directives>" } },
+
+						"swim": { "properties": { "image": "<partImage>:swim.<frame><directives>" } },
+						"swimIdle": { "properties": { "image": "<partImage>:swimIdle.<frame><directives>" } }
+
+					}
+				}
+			},
+			"backlegs": {
+				"properties": {
+					"centered": true,
+					"zLevel": -2,
+					"transformationGroups": ["flip", "legsbob"]
+				},
+				"partStates": {
+					"legsState": {
+						"none": { "properties": {} },
+
+						"idle": { "properties": { "image": "<partImage>:idle.<frame><directives>" } },
+
+						"duck": { "properties": { "image": "<partImage>:duck.<frame><directives>" } },
+						"sit": { "properties": { "image": "<partImage>:sit.<frame><directives>" } },
+						"lay": { "properties": { "image": "<partImage>:lay.<frame><directives>" } },
+
+						"walk": { "properties": { "image": "<partImage>:walk.<frame><directives>" } },
+						"run": { "properties": { "image": "<partImage>:run.<frame><directives>" } },
+
+						"jump": { "properties": { "image": "<partImage>:jump.<frame><directives>" } },
+						"fall": { "properties": { "image": "<partImage>:fall.<frame><directives>" } },
+
+						"swim": { "properties": { "image": "<partImage>:swim.<frame><directives>" } },
+						"swimIdle": { "properties": { "image": "<partImage>:swimIdle.<frame><directives>" } }
+
+
+					}
+				}
+			},
+			"tail": {
+				"properties": {
+					"centered": true,
+					"zLevel": -1,
+					"transformationGroups": ["flip", "tailbob"]
+				},
+				"partStates": {
+					"tailState": {
+						"none": { "properties": {} },
+
+						"idle": { "properties": { "image": "<partImage>:idle.<frame><directives>" } },
+
+						"duck": { "properties": { "image": "<partImage>:duck.<frame><directives>" } },
+						"sit": { "properties": { "image": "<partImage>:sit.<frame><directives>" } },
+						"lay": { "properties": { "image": "<partImage>:lay.<frame><directives>" } },
+
+						"walk": { "properties": { "image": "<partImage>:walk.<frame><directives>" } },
+						"run": { "properties": { "image": "<partImage>:run.<frame><directives>" } },
+
+						"jump": { "properties": { "image": "<partImage>:jump.<frame><directives>" } },
+						"fall": { "properties": { "image": "<partImage>:fall.<frame><directives>" } },
+
+						"swim": { "properties": { "image": "<partImage>:swim.<frame><directives>" } },
+						"swimIdle": { "properties": { "image": "<partImage>:swimIdle.<frame><directives>" } }
+
+
+
+					}
+				}
+			},
+			"head": {
+				"properties": {
+					"centered": true,
+					"zLevel": 2,
+					"transformationGroups": ["flip", "headbob"]
+				},
+				"partStates": {
+					"headState": {
+						"none": { "properties": {} },
+
+						"idle": { "properties": { "image": "<partImage>:idle.<frame><directives>" } },
+
+						"duck": { "properties": { "image": "<partImage>:duck.<frame><directives>" } },
+						"sit": { "properties": { "image": "<partImage>:sit.<frame><directives>" } },
+						"lay": { "properties": { "image": "<partImage>:lay.<frame><directives>" } },
+
+						"walk": { "properties": { "image": "<partImage>:walk.<frame><directives>" } },
+						"run": { "properties": { "image": "<partImage>:run.<frame><directives>" } },
+
+						"jump": { "properties": { "image": "<partImage>:jump.<frame><directives>" } },
+						"fall": { "properties": { "image": "<partImage>:fall.<frame><directives>" } },
+
+						"swim": { "properties": { "image": "<partImage>:swim.<frame><directives>" } },
+						"swimIdle": { "properties": { "image": "<partImage>:swimIdle.<frame><directives>" } }
+
+
+					}
+				}
+			}
+		}
+	},
+	"transformationGroups": {
+		"flip": {},
+		"headbob": {
+			"interpolated": false
+		},
+		"bodybob": {
+			"interpolated": false
+		},
+		"armsbob": {
+			"interpolated": false
+		},
+		"legsbob": {
+			"interpolated": false
+		},
+		"tailbob": {
+			"interpolated": false
+		}
+
+	},
+	"sounds": {
+	},
+	"particleEmitters": {
+	}
+}
