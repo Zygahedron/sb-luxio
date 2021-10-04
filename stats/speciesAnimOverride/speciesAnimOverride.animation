@@ -153,7 +153,6 @@
 
 					"eat": { "frames": 2, "cycle": 0.3, "mode": "end", "priority": 0 },
 					"sleep": { "frames": 2, "cycle": 1, "mode": "end", "priority": 0 }
-
 				}
 			}
 		},
@@ -425,7 +424,7 @@
 					"transformationGroups": ["flip", "headbob"]
 				},
 				"partStates": {
-					"headState": {
+					"emoteState": {
 						"none": { "properties": {} },
 
 						"idle": { "properties": { "image": "<partImage>:idle.<frame><directives>" } },

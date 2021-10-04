@@ -79,6 +79,7 @@ function updateAnims(dt)
 	offsetAnimUpdate()
 	rotationAnimUpdate()
 	--armRotationUpdate()
+	checkEmote()
 
 	for statename, state in pairs(self.animStateData) do
 		if state.animationState.time >= state.animationState.cycle then
@@ -95,11 +96,29 @@ function endAnim(state)
 
 	if (state.tag ~= nil) and state.tag.reset then
 		if state.tag.part == "global" then
-			p.setPartTag( "global", state.tag.name, "" )
+			animator.setGlobalTag( state.tag.name, "" )
 		else
-			p.setPartTag( state.tag.part, state.tag.name, "" )
+			animator.setPartTag( state.tag.part, state.tag.name, "" )
 		end
 		state.tag = nil
+	end
+end
+
+function checkEmote()
+	local portrait = world.entityPortrait(entity.id(), "full")
+	for _, part in ipairs(portrait) do
+		local imageString = part.image
+		local found1, found2 = imageString:find("/emote.png:")
+		if found1 ~= nil then
+			local found3, found4 = imageString:find(".1", found2, found2+10 )
+			if found3 ~= nil then
+				local directives = imageString:sub(found4+1)
+				self.directives = directives:gsub("?crop;0;0;0;0", "", 1)
+				animator.setGlobalTag( "directives", self.directives )
+
+				doAnim("emoteState", imageString:sub(found2+1, found3-1))
+			end
+		end
 	end
 end
 
