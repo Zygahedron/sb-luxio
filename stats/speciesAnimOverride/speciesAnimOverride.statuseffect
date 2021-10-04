@@ -1,6 +1,8 @@
 {
 	"name" : "speciesAnimOverride",
-	"effectConfig" : {},
+	"effectConfig" : {
+		"animationConfig" : "speciesAnimOverride.animation" // yes it has to be in both places
+	},
 	"defaultDuration" : 1,
 
 	"animationConfig" : "speciesAnimOverride.animation",

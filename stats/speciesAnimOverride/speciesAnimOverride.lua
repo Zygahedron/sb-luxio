@@ -1,4 +1,6 @@
-function init()
+
+
+function initAfterInit()
 	self.species = world.entitySpecies(entity.id())
 	self.animationData = root.assetJson("/stats/speciesAnimOverride/"..config.getParameter("animationConfig")).animatedParts.stateTypes
 	self.animStateData = root.assetJson("/humanoid/"..self.species.."/speciesAnimOverride.config")
@@ -6,10 +8,13 @@ function init()
 	for partname, filepath in pairs(self.animStateData.partImages) do
 		animator.setPartTag(partname, "partImage", filepath)
 	end
-
+	self.inited = true
 end
 
 function update(dt)
+	if not self.inited then
+		initAfterInit()
+	end
 	animator.setFlipped(mcontroller.facingDirection() == -1)
 	if mcontroller.walking() then
 
