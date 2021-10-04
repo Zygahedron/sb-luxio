@@ -28,6 +28,7 @@ function initAfterInit()
 end
 
 function update(dt)
+	effect.setParentDirectives("crop;0;0;0;0")
 	if not self.inited then
 		initAfterInit()
 	end
