@@ -43,7 +43,7 @@ function update(dt)
 			return
 		end
 		if mcontroller.crouching() then
-			doAnims(self.speciesData.animations.crouch)
+			doAnims(self.speciesData.animations.duck)
 			return
 		end
 		doAnims(self.speciesData.animations.idle)
