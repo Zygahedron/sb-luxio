@@ -2,7 +2,7 @@ function init()
 	self.offsets = {enabled = false, parts = {}}
 	self.rotating = {enabled = false, parts = {}}
 	self.animStateData = root.assetJson("/stats/speciesAnimOverride/"..config.getParameter("animationConfig")).animatedParts.stateTypes
-
+	self.directives = ""
 	for _, state in pairs(self.animStateData) do
 		state.animationState = {
 			anim = state.default,
@@ -81,6 +81,8 @@ function updateAnims(dt)
 	--armRotationUpdate()
 	checkEmote()
 
+	animator.setGlobalTag( "directives", self.directives..getDirectives() )
+
 	for statename, state in pairs(self.animStateData) do
 		if state.animationState.time >= state.animationState.cycle then
 			endAnim(state)
@@ -114,8 +116,6 @@ function checkEmote()
 			if found3 ~= nil then
 				local directives = imageString:sub(found4+1)
 				self.directives = directives:gsub("?crop;0;0;0;0", "", 1)
-				animator.setGlobalTag( "directives", self.directives )
-
 				doAnim("emoteState", imageString:sub(found2+1, found3-1))
 			end
 		end
@@ -345,4 +345,14 @@ function hasAnimEnded(state)
 	local times = math.floor(self.animStateData[state].animationState.time/self.animStateData[state].animationState.cycle)
 	local currentCycle = (self.animStateData[state].animationState.time - (self.animStateData[state].animationState.cycle*times))
 	return ended, times, currentCycle
+end
+
+
+function getDirectives()
+	local directivesList = status.statusProperty("speciesAnimOverrideDirectives") or {}
+	local directives = ""
+	for _, directive in pairs(directivesList) do
+		directives = directives.."?"..directive
+	end
+	return directives
 end
