@@ -23,7 +23,7 @@
 					"run": { "frames": 8, "cycle": 0.75, "mode": "loop", "priority": 0 },
 
 					"jump": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
-					"fall": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
+					"fall": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 0 },
 
 					"swim": { "frames": 7, "cycle": 0.50, "mode": "loop", "priority": 0 },
 					"swimIdle": { "frames": 2, "cycle": 0.50, "mode": "loop", "priority": 0 }
@@ -44,7 +44,7 @@
 					"run": { "frames": 8, "cycle": 0.75, "mode": "loop", "priority": 0 },
 
 					"jump": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
-					"fall": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
+					"fall": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 0 },
 
 					"swim": { "frames": 7, "cycle": 0.50, "mode": "loop", "priority": 0 },
 					"swimIdle": { "frames": 2, "cycle": 0.50, "mode": "loop", "priority": 0 }
@@ -67,7 +67,6 @@
 					"rotation": { "frames": 1, "cycle": 1, "mode": "end", "priority": 5 }
 				}
 			},
-
 			"legsState": {
 				"default": "none",
 				"states": {
@@ -82,7 +81,7 @@
 					"run": { "frames": 8, "cycle": 0.75, "mode": "loop", "priority": 0 },
 
 					"jump": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
-					"fall": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
+					"fall": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 0 },
 
 					"swim": { "frames": 7, "cycle": 0.50, "mode": "loop", "priority": 0 },
 					"swimIdle": { "frames": 2, "cycle": 0.50, "mode": "loop", "priority": 0 }
@@ -102,7 +101,7 @@
 					"run": { "frames": 8, "cycle": 0.75, "mode": "loop", "priority": 0 },
 
 					"jump": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
-					"fall": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
+					"fall": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 0 },
 
 					"swim": { "frames": 7, "cycle": 0.50, "mode": "loop", "priority": 0 },
 					"swimIdle": { "frames": 2, "cycle": 0.50, "mode": "loop", "priority": 0 }
@@ -123,10 +122,38 @@
 					"run": { "frames": 8, "cycle": 0.75, "mode": "loop", "priority": 0 },
 
 					"jump": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
-					"fall": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 2 },
+					"fall": { "frames": 4, "cycle": 0.25, "mode": "end", "priority": 0 },
 
 					"swim": { "frames": 7, "cycle": 0.50, "mode": "loop", "priority": 0 },
 					"swimIdle": { "frames": 2, "cycle": 0.50, "mode": "loop", "priority": 0 }
+				}
+			},
+			"emoteState": {
+				"default": "idle",
+				"states": {
+					"none": { "frames": 1, "cycle": 1, "mode": "end", "priority": -1 },
+
+					"idle": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
+
+					"blabber": { "frames": 2, "cycle": 0.3, "mode": "end", "priority": 0 },
+					"shout": { "frames": 2, "cycle": 0.3, "mode": "end", "priority": 0 },
+
+					"happy": { "frames": 2, "cycle": 0.3, "mode": "end", "priority": 0 },
+					"sad": { "frames": 5, "cycle": 1, "mode": "end", "priority": 0 },
+					"neutral": { "frames": 2, "cycle": 0.3, "mode": "end", "priority": 0 },
+					"laugh": { "frames": 2, "cycle": 0.5, "mode": "end", "priority": 0 },
+
+					"annoyed": { "frames": 2, "cycle": 1, "mode": "end", "priority": 0 },
+
+					"oh": { "frames": 2, "cycle": 1, "mode": "end", "priority": 0 },
+					"oooh": { "frames": 3, "cycle": 1, "mode": "end", "priority": 0 },
+
+					"blink": { "frames": 3, "cycle": 1, "mode": "end", "priority": 0 },
+					"wink": { "frames": 5, "cycle": 0.5, "mode": "end", "priority": 0 },
+
+					"eat": { "frames": 2, "cycle": 0.3, "mode": "end", "priority": 0 },
+					"sleep": { "frames": 2, "cycle": 1, "mode": "end", "priority": 0 }
+
 				}
 			}
 		},
@@ -390,8 +417,40 @@
 
 					}
 				}
-			}
+			},
+			"emote": {
+				"properties": {
+					"centered": true,
+					"zLevel": 2.2,
+					"transformationGroups": ["flip", "headbob"]
+				},
+				"partStates": {
+					"headState": {
+						"none": { "properties": {} },
 
+						"idle": { "properties": { "image": "<partImage>:idle.<frame><directives>" } },
+
+						"blabber": { "properties": { "image": "<partImage>:blabber.<frame><directives>" } },
+						"shout": { "properties": { "image": "<partImage>:shout.<frame><directives>" } },
+
+						"happy": { "properties": { "image": "<partImage>:happy.<frame><directives>" } },
+						"sad": { "properties": { "image": "<partImage>:sad.<frame><directives>" } },
+						"neutral": { "properties": { "image": "<partImage>:neutral.<frame><directives>" } },
+						"laugh": { "properties": { "image": "<partImage>:laugh.<frame><directives>" } },
+
+						"annoyed": { "properties": { "image": "<partImage>:annoyed.<frame><directives>" } },
+
+						"oh": { "properties": { "image": "<partImage>:oh.<frame><directives>" } },
+						"oooh": { "properties": { "image": "<partImage>:oooh.<frame><directives>" } },
+
+						"blink": { "properties": { "image": "<partImage>:blink.<frame><directives>" } },
+						"wink": { "properties": { "image": "<partImage>:wink.<frame><directives>" } },
+
+						"eat": { "properties": { "image": "<partImage>:eat.<frame><directives>" } },
+						"sleep": { "properties": { "image": "<partImage>:sleep.<frame><directives>" } }
+					}
+				}
+			}
 		}
 	},
 	"transformationGroups": {

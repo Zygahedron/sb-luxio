@@ -33,36 +33,36 @@ function update(dt)
 	end
 	updateAnims(dt)
 	animator.setFlipped(mcontroller.facingDirection() == -1)
-	if mcontroller.walking() then
-		doAnims(self.speciesData.animations.walk)
+	if mcontroller.onGround() then
+		if mcontroller.walking() then
+			doAnims(self.speciesData.animations.walk)
+			return
+		end
+		if mcontroller.running() then
+			doAnims(self.speciesData.animations.run)
+			return
+		end
+		if mcontroller.crouching() then
+			doAnims(self.speciesData.animations.crouch)
+			return
+		end
+		doAnims(self.speciesData.animations.idle)
 		return
 	end
-	if mcontroller.running() then
-		doAnims(self.speciesData.animations.run)
-		return
-	end
-	if mcontroller.falling() then
-		doAnims(self.speciesData.animations.fall)
+	if mcontroller.liquidMovement() then
+		doAnims(self.speciesData.animations.swim)
 		return
 	end
 	if mcontroller.jumping() then
 		doAnims(self.speciesData.animations.jump)
 		return
 	end
-	if mcontroller.crouching() then
-		doAnims(self.speciesData.animations.crouch)
+	if mcontroller.falling() then
+		doAnims(self.speciesData.animations.fall)
 		return
 	end
 	if mcontroller.flying() then
 		doAnims(self.speciesData.animations.fly)
-		return
-	end
-	if mcontroller.groundMovement() then
-		doAnims(self.speciesData.animations.fly)
-		return
-	end
-	if mcontroller.liquidMovement() then
-		doAnims(self.speciesData.animations.swim)
 		return
 	end
 end
