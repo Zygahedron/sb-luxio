@@ -3,6 +3,14 @@
 		"op": "add",
 		"path": "/aliases",
 		"value": {
+			"walk.6" : "walk.4",
+			"walk.7" : "walk.3",
+			"walk.8" : "walk.2",
+
+			"run.6" : "run.4",
+			"run.7" : "run.3",
+			"run.8" : "run.2",
+
 			"1.run.1" : "run.1",
 			"1.run.2" : "run.2",
 			"1.run.3" : "run.3",

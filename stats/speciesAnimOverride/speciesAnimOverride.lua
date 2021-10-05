@@ -170,7 +170,6 @@ function getCosmeticDirectives(item)
 	for color, replace in pairs(colors[index]) do
 		colorReplaceString = colorReplaceString.."?replace;"..color.."="..replace
 	end
-	sb.logInfo(colorReplaceString)
 	return colorReplaceString
 end
 
