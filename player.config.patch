@@ -9,5 +9,11 @@
 
  { "op" : "add",
    "path" : "/deploymentConfig/speciesStarterMechBody/luxio",
-   "value" : "mechbodynovakidproto" }
+   "value" : "mechbodynovakidproto" },
+
+   {
+    "op": "add",
+    "path": "/companionsConfig/scripts/-",
+    "value": "/scripts/speciesAnimOverride_player_companion.lua"
+   }
 ]

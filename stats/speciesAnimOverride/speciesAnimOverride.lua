@@ -1,4 +1,6 @@
 function init()
+	self.loopedMessages = {}
+	self.equipment = {}
 	self.offsets = {enabled = false, parts = {}}
 	self.rotating = {enabled = false, parts = {}}
 	self.animStateData = root.assetJson("/stats/speciesAnimOverride/"..config.getParameter("animationConfig")).animatedParts.stateTypes
@@ -19,6 +21,7 @@ end
 
 function initAfterInit()
 	self.species = world.entitySpecies(entity.id())
+	self.gender = world.entityGender(entity.id())
 	self.speciesData = root.assetJson("/humanoid/"..self.species.."/speciesAnimOverride.config")
 
 	for partname, filepath in pairs(self.speciesData.partImages) do
@@ -31,9 +34,199 @@ function update(dt)
 	effect.setParentDirectives("crop;0;0;0;0")
 	if not self.inited then
 		initAfterInit()
+	else
+		updateAnims(dt)
+		animator.setFlipped(mcontroller.facingDirection() == -1)
+		getCosmeticItems()
+		checkHumanoidAnim()
 	end
-	updateAnims(dt)
-	animator.setFlipped(mcontroller.facingDirection() == -1)
+end
+
+function uninit()
+end
+
+function loopedMessage(name, eid, message, args, callback, failCallback)
+	if self.loopedMessages[name] == nil then
+		self.loopedMessages[name] = {
+			rpc = world.sendEntityMessage(eid, message, table.unpack(args or {})),
+			callback = callback,
+			failCallback = failCallback
+		}
+	elseif self.loopedMessages[name].rpc:finished() then
+		if self.loopedMessages[name].rpc:succeeded() and self.loopedMessages[name].callback ~= nil then
+			self.loopedMessages[name].callback(self.loopedMessages[name].rpc:result())
+		elseif self.loopedMessages[name].failCallback ~= nil then
+			self.loopedMessages[name].failCallback()
+		end
+		self.loopedMessages[name] = nil
+	end
+end
+
+setCosmetic = {}
+
+function getCosmeticItems()
+	loopedMessage("getEquips", entity.id(), "animOverrideGetEquips", {}, function(equips)
+		setCosmetic.head(equips.headCosmetic or equips.head)
+		setCosmetic.chest(equips.chestCosmetic or equips.chest)
+		setCosmetic.legs(equips.legsCosmetic or equips.legs)
+		setCosmetic.back(equips.backCosmetic or equips.back)
+	end )
+end
+
+function setCosmetic.head(cosmetic)
+	if cosmetic ~= nil then
+		local item = root.itemConfig(cosmetic)
+		local image = fixFilepath(item.config[self.gender.."Frames"], item)
+		local mask = fixFilepath(item.config.mask, item)
+		animator.setPartTag("head_cosmetic", "partImage", image )
+		if mask ~= nil then
+			animator.setGlobalTag( "headMask", "?addmask="..mask )
+		end
+	else
+		animator.setPartTag("head_cosmetic", "partImage", "" )
+		animator.setGlobalTag( "headMask", "" )
+	end
+end
+
+function setCosmetic.chest(cosmetic)
+	if cosmetic ~= nil then
+		local item = root.itemConfig(cosmetic)
+		local images = item.config[self.gender.."Frames"]
+
+		local chest = fixFilepath(images.body, item)
+
+		local backSleeve = fixFilepath(images.backSleeve, item)
+		local frontSleeve = fixFilepath(images.frontSleeve, item)
+
+		local frontMask = fixFilepath(images.frontMask, item)
+		local backMask = fixFilepath(images.backMask, item)
+
+		animator.setPartTag("chest_cosmetic", "partImage", chest )
+		animator.setPartTag("backarms_cosmetic", "partImage", backSleeve )
+		animator.setPartTag("frontarms_cosmetic", "partImage", frontSleeve )
+		animator.setPartTag("backarms_rotation_cosmetic", "partImage", backSleeve )
+		animator.setPartTag("frontarms_rotation_cosmetic", "partImage", frontSleeve )
+
+	else
+		animator.setPartTag("chest_cosmetic", "partImage", "" )
+		animator.setPartTag("backarms_cosmetic", "partImage", "" )
+		animator.setPartTag("frontarms_cosmetic", "partImage", "" )
+		animator.setPartTag("backarms_rotation_cosmetic", "partImage", "" )
+		animator.setPartTag("frontarms_rotation_cosmetic", "partImage", "" )
+	end
+end
+
+function setCosmetic.legs(cosmetic)
+	if cosmetic ~= nil then
+		local item = root.itemConfig(cosmetic)
+		local image = fixFilepath(item.config[self.gender.."Frames"], item)
+		local mask = fixFilepath(item.config.mask, item)
+		animator.setPartTag("body_cosmetic", "partImage", image )
+		if mask ~= nil then
+			animator.setGlobalTag( "bodyMask", "?addmask="..mask )
+		end
+	else
+		sb.logInfo("cleared legs")
+		animator.setPartTag("head_cosmetic", "partImage", "" )
+		animator.setGlobalTag( "bodyMask", "" )
+	end
+end
+
+function setCosmetic.back(cosmetic)
+	if cosmetic ~= nil then
+	else
+	end
+end
+
+function fixFilepath(string, item)
+	if string ~= nil then
+		if string[1] == "/" then
+			return string
+		else
+			return item.directory..string
+		end
+	end
+end
+
+function updateAnims(dt)
+	for statename, state in pairs(self.animStateData) do
+		state.animationState.time = state.animationState.time + dt
+	end
+
+	offsetAnimUpdate()
+	rotationAnimUpdate()
+	--armRotationUpdate()
+
+	animator.setGlobalTag( "directives", self.directives..getDirectives() )
+
+	for statename, state in pairs(self.animStateData) do
+		if state.animationState.time >= state.animationState.cycle then
+			endAnim(state)
+		end
+	end
+end
+
+function endAnim(state)
+	for _, func in pairs(state.animationState.queue) do
+		func()
+	end
+	state.animationState.queue = {}
+
+	if (state.tag ~= nil) and state.tag.reset then
+		if state.tag.part == "global" then
+			animator.setGlobalTag( state.tag.name, "" )
+		else
+			animator.setPartTag( state.tag.part, state.tag.name, "" )
+		end
+		state.tag = nil
+	end
+end
+
+function checkHumanoidAnim()
+	local portrait = world.entityPortrait(entity.id(), "full")
+	for _, part in ipairs(portrait) do
+		local imageString = part.image
+		-- check for doing an emote animation
+		local found1, found2 = imageString:find("/emote.png:")
+		if found1 ~= nil then
+			local found3, found4 = imageString:find(".1", found2, found2+10 )
+			if found3 ~= nil then
+				local directives = imageString:sub(found4+1)
+				self.directives = directives:gsub("?crop;0;0;0;0", "", 1)
+				doAnim("emoteState", imageString:sub(found2+1, found3-1))
+			end
+		end
+
+		--get personality values
+		found1, found2 = imageString:find("body.png:idle.")
+		if found1 ~= nil then
+			animator.setGlobalTag( "bodyPersonality", imageString:sub(found2+1, found2+1) )
+		end
+		found1, found2 = imageString:find("backarm.png:idle.")
+		if found1 ~= nil then
+			animator.setGlobalTag( "backarmPersonality", imageString:sub(found2+1, found2+1) )
+		end
+		found1, found2 = imageString:find("frontarm.png:idle.")
+		if found1 ~= nil then
+			animator.setGlobalTag( "frontarmPersonality", imageString:sub(found2+1, found2+1) )
+		end
+
+
+		--check for doing a sit animation
+		found1, found2 = imageString:find("body.png:sit.1")
+		if found1 ~= nil then
+			doAnims(self.speciesData.animations.sit)
+			return
+		end
+
+		--check for doing a lay animation
+		found1, found2 = imageString:find("body.png:lay.1")
+		if found1 ~= nil then
+			doAnims(self.speciesData.animations.sit)
+			return
+		end
+	end
+
 	if mcontroller.onGround() then
 		if mcontroller.walking() then
 			doAnims(self.speciesData.animations.walk)
@@ -65,60 +258,6 @@ function update(dt)
 	if mcontroller.flying() then
 		doAnims(self.speciesData.animations.fly)
 		return
-	end
-end
-
-function uninit()
-end
-
-function updateAnims(dt)
-	for statename, state in pairs(self.animStateData) do
-		state.animationState.time = state.animationState.time + dt
-	end
-
-	offsetAnimUpdate()
-	rotationAnimUpdate()
-	--armRotationUpdate()
-	checkEmote()
-
-	animator.setGlobalTag( "directives", self.directives..getDirectives() )
-
-	for statename, state in pairs(self.animStateData) do
-		if state.animationState.time >= state.animationState.cycle then
-			endAnim(state)
-		end
-	end
-end
-
-function endAnim(state)
-	for _, func in pairs(state.animationState.queue) do
-		func()
-	end
-	state.animationState.queue = {}
-
-	if (state.tag ~= nil) and state.tag.reset then
-		if state.tag.part == "global" then
-			animator.setGlobalTag( state.tag.name, "" )
-		else
-			animator.setPartTag( state.tag.part, state.tag.name, "" )
-		end
-		state.tag = nil
-	end
-end
-
-function checkEmote()
-	local portrait = world.entityPortrait(entity.id(), "full")
-	for _, part in ipairs(portrait) do
-		local imageString = part.image
-		local found1, found2 = imageString:find("/emote.png:")
-		if found1 ~= nil then
-			local found3, found4 = imageString:find(".1", found2, found2+10 )
-			if found3 ~= nil then
-				local directives = imageString:sub(found4+1)
-				self.directives = directives:gsub("?crop;0;0;0;0", "", 1)
-				doAnim("emoteState", imageString:sub(found2+1, found3-1))
-			end
-		end
 	end
 end
 
