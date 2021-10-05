@@ -76,9 +76,10 @@ end
 function setCosmetic.head(cosmetic)
 	if cosmetic ~= nil then
 		local item = root.itemConfig(cosmetic)
-		local image = fixFilepath(item.config[self.gender.."Frames"], item)
 		local mask = fixFilepath(item.config.mask, item)
-		animator.setPartTag("head_cosmetic", "partImage", image )
+
+		animator.setPartTag("head_cosmetic", "cosmeticDirectives", getCosmeticDirectives(item) )
+		animator.setPartTag("head_cosmetic", "partImage", fixFilepath(item.config[self.gender.."Frames"], item) )
 		if mask ~= nil then
 			animator.setGlobalTag( "headMask", "?addmask="..mask )
 		end
@@ -101,6 +102,14 @@ function setCosmetic.chest(cosmetic)
 		local frontMask = fixFilepath(images.frontMask, item)
 		local backMask = fixFilepath(images.backMask, item)
 
+		local directives = getCosmeticDirectives(item)
+
+		animator.setPartTag("chest_cosmetic", "cosmeticDirectives", directives )
+		animator.setPartTag("backarms_cosmetic", "cosmeticDirectives", directives )
+		animator.setPartTag("frontarms_cosmetic", "cosmeticDirectives", directives )
+		animator.setPartTag("backarms_rotation_cosmetic", "cosmeticDirectives", directives )
+		animator.setPartTag("frontarms_rotation_cosmetic", "cosmeticDirectives", directives )
+
 		animator.setPartTag("chest_cosmetic", "partImage", chest )
 		animator.setPartTag("backarms_cosmetic", "partImage", backSleeve )
 		animator.setPartTag("frontarms_cosmetic", "partImage", frontSleeve )
@@ -119,22 +128,27 @@ end
 function setCosmetic.legs(cosmetic)
 	if cosmetic ~= nil then
 		local item = root.itemConfig(cosmetic)
-		local image = fixFilepath(item.config[self.gender.."Frames"], item)
 		local mask = fixFilepath(item.config.mask, item)
-		animator.setPartTag("body_cosmetic", "partImage", image )
+
+		animator.setPartTag("body_cosmetic", "cosmeticDirectives", getCosmeticDirectives(item) )
+		animator.setPartTag("body_cosmetic", "partImage", fixFilepath(item.config[self.gender.."Frames"], item) )
 		if mask ~= nil then
 			animator.setGlobalTag( "bodyMask", "?addmask="..mask )
 		end
 	else
-		sb.logInfo("cleared legs")
-		animator.setPartTag("head_cosmetic", "partImage", "" )
+		animator.setPartTag("body_cosmetic", "partImage", "" )
 		animator.setGlobalTag( "bodyMask", "" )
 	end
 end
 
 function setCosmetic.back(cosmetic)
 	if cosmetic ~= nil then
+		local item = root.itemConfig(cosmetic)
+
+		animator.setPartTag("back_cosmetic", "cosmeticDirectives", getCosmeticDirectives(item) )
+		animator.setPartTag("back_cosmetic", "partImage", fixFilepath(item.config[self.gender.."Frames"], item) )
 	else
+		animator.setPartTag("back_cosmetic", "partImage", "" )
 	end
 end
 
@@ -146,6 +160,17 @@ function fixFilepath(string, item)
 			return item.directory..string
 		end
 	end
+end
+
+function getCosmeticDirectives(item)
+	local colors = item.config.colorOptions
+	local index = item.parameters.colorIndex % #colors
+	local colorReplaceString = ""
+	for color, replace in pairs(colors[index]) do
+		colorReplaceString = colorReplaceString.."?replace;"..color.."="..replace
+	end
+	sb.logInfo(colorReplaceString)
+	return colorReplaceString
 end
 
 function updateAnims(dt)
