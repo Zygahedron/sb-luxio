@@ -132,9 +132,11 @@
 				}
 			},
 			"headState": {
-				"default": "idle",
+				"default": "normal",
 				"states": {
 					"none": { "frames": 1, "cycle": 1, "mode": "end", "priority": -1 },
+
+					"normal": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
 
 					"idle": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
 					"duck": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
@@ -158,24 +160,24 @@
 
 					"idle": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 },
 
-					"blabber": { "frames": 2, "cycle": 0.3, "mode": "end", "priority": 0 },
-					"shout": { "frames": 2, "cycle": 0.3, "mode": "end", "priority": 0 },
+					"blabber": { "frames": 2, "cycle": 0.3, "mode": "end", "priority": 1 },
+					"shout": { "frames": 2, "cycle": 0.3, "mode": "end", "priority": 1 },
 
-					"happy": { "frames": 2, "cycle": 0.3, "mode": "end", "priority": 0 },
-					"sad": { "frames": 5, "cycle": 1, "mode": "end", "priority": 0 },
-					"neutral": { "frames": 2, "cycle": 0.3, "mode": "end", "priority": 0 },
-					"laugh": { "frames": 2, "cycle": 0.5, "mode": "end", "priority": 0 },
+					"happy": { "frames": 2, "cycle": 0.3, "mode": "end", "priority": 1 },
+					"sad": { "frames": 5, "cycle": 1, "mode": "end", "priority": 1 },
+					"neutral": { "frames": 2, "cycle": 0.3, "mode": "end", "priority": 1 },
+					"laugh": { "frames": 2, "cycle": 0.5, "mode": "end", "priority": 1 },
 
-					"annoyed": { "frames": 2, "cycle": 1, "mode": "end", "priority": 0 },
+					"annoyed": { "frames": 2, "cycle": 1, "mode": "end", "priority": 1 },
 
-					"oh": { "frames": 2, "cycle": 1, "mode": "end", "priority": 0 },
-					"oooh": { "frames": 3, "cycle": 1, "mode": "end", "priority": 0 },
+					"oh": { "frames": 2, "cycle": 1, "mode": "end", "priority": 1 },
+					"oooh": { "frames": 3, "cycle": 1, "mode": "end", "priority": 1 },
 
-					"blink": { "frames": 3, "cycle": 1, "mode": "end", "priority": 0 },
-					"wink": { "frames": 5, "cycle": 0.5, "mode": "end", "priority": 0 },
+					"blink": { "frames": 3, "cycle": 1, "mode": "end", "priority": 1 },
+					"wink": { "frames": 5, "cycle": 0.5, "mode": "end", "priority": 1 },
 
-					"eat": { "frames": 2, "cycle": 0.3, "mode": "end", "priority": 0 },
-					"sleep": { "frames": 2, "cycle": 1, "mode": "end", "priority": 0 }
+					"eat": { "frames": 2, "cycle": 0.3, "mode": "end", "priority": 1 },
+					"sleep": { "frames": 2, "cycle": 1, "mode": "end", "priority": 1 }
 				}
 			}
 		},
@@ -283,13 +285,13 @@
 				"properties": {
 					"centered": true,
 					"zLevel": 3,
-					"transformationGroups": ["flip", "armsbob"]
+					"transformationGroups": ["flip", "frontarmsrotation", "armsbob"]
 				},
 				"partStates": {
 					"frontarmsRotationState": {
 						"none": { "properties": {} },
 
-						"rotation": { "properties": { "image": "<partImage>:rotation.<frame><customizeDirectives><frontarmsMask><directives>" } }
+						"rotation": { "properties": { "image": "<partImage>:rotation<customizeDirectives><frontarmsMask><directives>" } }
 
 					}
 				}
@@ -325,13 +327,13 @@
 				"properties": {
 					"centered": true,
 					"zLevel": -3,
-					"transformationGroups": ["flip", "armsbob"]
+					"transformationGroups": ["flip", "backarmsrotation", "armsbob"]
 				},
 				"partStates": {
 					"backarmsRotationState": {
 						"none": { "properties": {} },
 
-						"rotation": { "properties": { "image": "<partImage>:rotation.<frame><customizeDirectives><backarmsMask><directives>" } }
+						"rotation": { "properties": { "image": "<partImage>:rotation<customizeDirectives><backarmsMask><directives>" } }
 
 					}
 				}
@@ -370,13 +372,13 @@
 				"properties": {
 					"centered": true,
 					"zLevel": 3,
-					"transformationGroups": ["flip", "armsbob"]
+					"transformationGroups": ["flip", "frontarmsrotation", "armsbob"]
 				},
 				"partStates": {
 					"frontarmsRotationState": {
 						"none": { "properties": {} },
 
-						"rotation": { "properties": { "image": "<partImage>:rotation.<frame><cosmeticDirectives><directives>" } }
+						"rotation": { "properties": { "image": "<partImage>:rotation<cosmeticDirectives><directives>" } }
 
 					}
 				}
@@ -413,13 +415,13 @@
 				"properties": {
 					"centered": true,
 					"zLevel": -2.9,
-					"transformationGroups": ["flip", "armsbob"]
+					"transformationGroups": ["flip", "backarmsrotation", "armsbob"]
 				},
 				"partStates": {
 					"backarmsRotationState": {
 						"none": { "properties": {} },
 
-						"rotation": { "properties": { "image": "<partImage>:rotation.<frame><cosmeticDirectives><directives>" } }
+						"rotation": { "properties": { "image": "<partImage>:rotation<cosmeticDirectives><directives>" } }
 
 					}
 				}
@@ -517,6 +519,8 @@
 					"headState": {
 						"none": { "properties": {} },
 
+						"normal": { "properties": { "image": "<partImage>:normal<customizeDirectives><headMask><directives>" } },
+
 						"idle": { "properties": { "image": "<partImage>:idle.<frame><customizeDirectives><headMask><directives>" } },
 
 						"duck": { "properties": { "image": "<partImage>:duck.<frame><customizeDirectives><headMask><directives>" } },
@@ -543,6 +547,8 @@
 				"partStates": {
 					"headState": {
 						"none": { "properties": {} },
+
+						"normal": { "properties": { "image": "<partImage>:normal<customizeDirectives><headMask><directives>" } },
 
 						"idle": { "properties": { "image": "<partImage>:idle.<frame><customizeDirectives><headMask><directives>" } },
 
@@ -604,6 +610,8 @@
 					"headState": {
 						"none": { "properties": {} },
 
+						"normal": { "properties": { "image": "<partImage>:normal<cosmeticDirectives><directives>" } },
+
 						"idle": { "properties": { "image": "<partImage>:idle.<frame><cosmeticDirectives><directives>" } },
 
 						"duck": { "properties": { "image": "<partImage>:duck.<frame><cosmeticDirectives><directives>" } },
@@ -633,6 +641,12 @@
 		},
 		"armsbob": {
 			"interpolated": false
+		},
+		"frontarmsrotation": {
+			"interpolated": true
+		},
+		"backarmsrotation": {
+			"interpolated": true
 		},
 		"legsbob": {
 			"interpolated": false

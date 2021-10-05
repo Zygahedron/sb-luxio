@@ -39,6 +39,7 @@ function update(dt)
 		animator.setFlipped(mcontroller.facingDirection() == -1)
 		animator.setGlobalTag("direction", mcontroller.facingDirection() * mcontroller.movingDirection() )
 		getCosmeticItems()
+		getHandItems()
 		checkHumanoidAnim()
 	end
 end
@@ -61,6 +62,15 @@ function loopedMessage(name, eid, message, args, callback, failCallback)
 		end
 		self.loopedMessages[name] = nil
 	end
+end
+
+function getHandItems()
+	local primaryItem = world.entityHandItemDescriptor(entity.id(), "primary")
+	local altItem = world.entityHandItemDescriptor(entity.id(), "alt")
+
+end
+
+function getHandItem()
 end
 
 setCosmetic = {}
@@ -235,6 +245,16 @@ function checkHumanoidAnim()
 		if found1 ~= nil then
 			animator.setGlobalTag( "frontarmPersonality", imageString:sub(found2+1, found2+1) )
 		end
+		-- get arm rotation
+		found1, found2 = imageString:find("backarm.png:rotation")
+		if found1 ~= nil then
+			sb.logInfo(sb.printJson(part))
+		end
+		found1, found2 = imageString:find("frontarm.png:rotation")
+		if found1 ~= nil then
+			sb.logInfo(sb.printJson(part))
+		end
+
 
 
 		--check for doing a sit animation
