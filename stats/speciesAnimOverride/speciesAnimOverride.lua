@@ -37,6 +37,7 @@ function update(dt)
 	else
 		updateAnims(dt)
 		animator.setFlipped(mcontroller.facingDirection() == -1)
+		animator.setGlobalTag("direction", mcontroller.facingDirection() * mcontroller.movingDirection() )
 		getCosmeticItems()
 		checkHumanoidAnim()
 	end
@@ -164,7 +165,7 @@ end
 
 function getCosmeticDirectives(item)
 	local colors = item.config.colorOptions
-	local index = (item.parameters.colorIndex % #colors) + 1
+	local index = ((item.parameters.colorIndex or 1) % #colors) + 1
 	local colorReplaceString = ""
 	for color, replace in pairs(colors[index]) do
 		colorReplaceString = colorReplaceString.."?replace;"..color.."="..replace

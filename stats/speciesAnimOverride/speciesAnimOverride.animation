@@ -13,7 +13,8 @@
 		"backlegsMask" : "",
 		"frontarmsMask" : "",
 		"backarmsMask" : "",
-		"tailMask" : ""
+		"tailMask" : "",
+		"direction" : "1"
 
 	},
 	"animatedParts": {
@@ -195,8 +196,8 @@
 						"sit": { "properties": { "image": "<partImage>:sit.<frame><customizeDirectives><bodyMask><directives>" } },
 						"lay": { "properties": { "image": "<partImage>:lay.<frame><customizeDirectives><bodyMask><directives>" } },
 
-						"walk": { "properties": { "image": "<partImage>:walk.<frame><customizeDirectives><bodyMask><directives>" } },
-						"run": { "properties": { "image": "<partImage>:run.<frame><customizeDirectives><bodyMask><directives>" } },
+						"walk": { "properties": { "image": "<partImage>:<direction>.walk.<frame><customizeDirectives><bodyMask><directives>" } },
+						"run": { "properties": { "image": "<partImage>:<direction>.run.<frame><customizeDirectives><bodyMask><directives>" } },
 
 						"jump": { "properties": { "image": "<partImage>:jump.<frame><customizeDirectives><bodyMask><directives>" } },
 						"fall": { "properties": { "image": "<partImage>:fall.<frame><customizeDirectives><bodyMask><directives>" } },
@@ -223,8 +224,8 @@
 						"sit": { "properties": { "image": "<partImage>:sit.<frame><cosmeticDirectives><directives>" } },
 						"lay": { "properties": { "image": "<partImage>:lay.<frame><cosmeticDirectives><directives>" } },
 
-						"walk": { "properties": { "image": "<partImage>:walk.<frame><cosmeticDirectives><directives>" } },
-						"run": { "properties": { "image": "<partImage>:run.<frame><cosmeticDirectives><directives>" } },
+						"walk": { "properties": { "image": "<partImage>:<direction>.walk.<frame><cosmeticDirectives><directives>" } },
+						"run": { "properties": { "image": "<partImage>:<direction>.run.<frame><cosmeticDirectives><directives>" } },
 
 						"jump": { "properties": { "image": "<partImage>:jump.<frame><cosmeticDirectives><directives>" } },
 						"fall": { "properties": { "image": "<partImage>:fall.<frame><cosmeticDirectives><directives>" } },
@@ -267,8 +268,8 @@
 						"sit": { "properties": { "image": "<partImage>:sit.<frame><customizeDirectives><frontarmsMask><directives>" } },
 						"lay": { "properties": { "image": "<partImage>:lay.<frame><customizeDirectives><frontarmsMask><directives>" } },
 
-						"walk": { "properties": { "image": "<partImage>:walk.<frame><<customizeDirectives>frontarmsMask><directives>" } },
-						"run": { "properties": { "image": "<partImage>:run.<frame><customizeDirectives><frontarmsMask><directives>" } },
+						"walk": { "properties": { "image": "<partImage>:<direction>.walk.<frame><<customizeDirectives>frontarmsMask><directives>" } },
+						"run": { "properties": { "image": "<partImage>:<direction>.run.<frame><customizeDirectives><frontarmsMask><directives>" } },
 
 						"jump": { "properties": { "image": "<partImage>:jump.<frame><customizeDirectives><frontarmsMask><directives>" } },
 						"fall": { "properties": { "image": "<partImage>:fall.<frame><customizeDirectives><frontarmsMask><directives>" } },
@@ -309,8 +310,8 @@
 						"sit": { "properties": { "image": "<partImage>:sit.<frame><customizeDirectives><backarmsMask><directives>" } },
 						"lay": { "properties": { "image": "<partImage>:lay.<frame><customizeDirectives><backarmsMask><directives>" } },
 
-						"walk": { "properties": { "image": "<partImage>:walk.<frame><customizeDirectives><backarmsMask><directives>" } },
-						"run": { "properties": { "image": "<partImage>:run.<frame><customizeDirectives><backarmsMask><directives>" } },
+						"walk": { "properties": { "image": "<partImage>:<direction>.walk.<frame><customizeDirectives><backarmsMask><directives>" } },
+						"run": { "properties": { "image": "<partImage>:<direction>.run.<frame><customizeDirectives><backarmsMask><directives>" } },
 
 						"jump": { "properties": { "image": "<partImage>:jump.<frame><customizeDirectives><backarmsMask><directives>" } },
 						"fall": { "properties": { "image": "<partImage>:fall.<frame><customizeDirectives><backarmsMask><directives>" } },
@@ -352,8 +353,8 @@
 						"sit": { "properties": { "image": "<partImage>:sit.<frame><cosmeticDirectives><directives>" } },
 						"lay": { "properties": { "image": "<partImage>:lay.<frame><cosmeticDirectives><directives>" } },
 
-						"walk": { "properties": { "image": "<partImage>:walk.<frame><cosmeticDirectives><directives>" } },
-						"run": { "properties": { "image": "<partImage>:run.<frame><cosmeticDirectives><directives>" } },
+						"walk": { "properties": { "image": "<partImage>:<direction>.walk.<frame><cosmeticDirectives><directives>" } },
+						"run": { "properties": { "image": "<partImage>:<direction>.run.<frame><cosmeticDirectives><directives>" } },
 
 						"jump": { "properties": { "image": "<partImage>:jump.<frame><cosmeticDirectives><directives>" } },
 						"fall": { "properties": { "image": "<partImage>:fall.<frame><cosmeticDirectives><directives>" } },
@@ -396,8 +397,8 @@
 						"sit": { "properties": { "image": "<partImage>:sit.<frame><cosmeticDirectives><directives>" } },
 						"lay": { "properties": { "image": "<partImage>:lay.<frame><cosmeticDirectives><directives>" } },
 
-						"walk": { "properties": { "image": "<partImage>:walk.<frame><cosmeticDirectives><directives>" } },
-						"run": { "properties": { "image": "<partImage>:run.<frame><cosmeticDirectives><directives>" } },
+						"walk": { "properties": { "image": "<partImage>:<direction>.walk.<frame><cosmeticDirectives><directives>" } },
+						"run": { "properties": { "image": "<partImage>:<direction>.run.<frame><cosmeticDirectives><directives>" } },
 
 						"jump": { "properties": { "image": "<partImage>:jump.<frame><cosmeticDirectives><directives>" } },
 						"fall": { "properties": { "image": "<partImage>:fall.<frame><cosmeticDirectives><directives>" } },
@@ -440,8 +441,8 @@
 						"sit": { "properties": { "image": "<partImage>:sit.<frame><customizeDirectives><frontlegsMask><directives>" } },
 						"lay": { "properties": { "image": "<partImage>:lay.<frame><customizeDirectives><frontlegsMask><directives>" } },
 
-						"walk": { "properties": { "image": "<partImage>:walk.<frame><customizeDirectives><frontlegsMask><directives>" } },
-						"run": { "properties": { "image": "<partImage>:run.<frame><customizeDirectives><frontlegsMask><directives>" } },
+						"walk": { "properties": { "image": "<partImage>:<direction>.walk.<frame><customizeDirectives><frontlegsMask><directives>" } },
+						"run": { "properties": { "image": "<partImage>:<direction>.run.<frame><customizeDirectives><frontlegsMask><directives>" } },
 
 						"jump": { "properties": { "image": "<partImage>:jump.<frame><customizeDirectives><frontlegsMask><directives>" } },
 						"fall": { "properties": { "image": "<partImage>:fall.<frame><customizeDirectives><frontlegsMask><directives>" } },
@@ -468,8 +469,8 @@
 						"sit": { "properties": { "image": "<partImage>:sit.<frame><customizeDirectives><backlegsMask><directives>" } },
 						"lay": { "properties": { "image": "<partImage>:lay.<frame><customizeDirectives><backlegsMask><directives>" } },
 
-						"walk": { "properties": { "image": "<partImage>:walk.<frame><customizeDirectives><backlegsMask><directives>" } },
-						"run": { "properties": { "image": "<partImage>:run.<frame><customizeDirectives><backlegsMask><directives>" } },
+						"walk": { "properties": { "image": "<partImage>:<direction>.walk.<frame><customizeDirectives><backlegsMask><directives>" } },
+						"run": { "properties": { "image": "<partImage>:<direction>.run.<frame><customizeDirectives><backlegsMask><directives>" } },
 
 						"jump": { "properties": { "image": "<partImage>:jump.<frame><customizeDirectives><backlegsMask><directives>" } },
 						"fall": { "properties": { "image": "<partImage>:fall.<frame><customizeDirectives><backlegsMask><directives>" } },
@@ -495,8 +496,8 @@
 						"sit": { "properties": { "image": "<partImage>:sit.<frame><customizeDirectives><tailMask><directives>" } },
 						"lay": { "properties": { "image": "<partImage>:lay.<frame><customizeDirectives><tailMask><directives>" } },
 
-						"walk": { "properties": { "image": "<partImage>:walk.<frame><customizeDirectives><tailMask><directives>" } },
-						"run": { "properties": { "image": "<partImage>:run.<frame><customizeDirectives><tailMask><directives>" } },
+						"walk": { "properties": { "image": "<partImage>:<direction>.walk.<frame><customizeDirectives><tailMask><directives>" } },
+						"run": { "properties": { "image": "<partImage>:<direction>.run.<frame><customizeDirectives><tailMask><directives>" } },
 
 						"jump": { "properties": { "image": "<partImage>:jump.<frame><customizeDirectives><tailMask><directives>" } },
 						"fall": { "properties": { "image": "<partImage>:fall.<frame><customizeDirectives><tailMask><directives>" } },
@@ -522,8 +523,8 @@
 						"sit": { "properties": { "image": "<partImage>:sit.<frame><customizeDirectives><headMask><directives>" } },
 						"lay": { "properties": { "image": "<partImage>:lay.<frame><customizeDirectives><headMask><directives>" } },
 
-						"walk": { "properties": { "image": "<partImage>:walk.<frame><customizeDirectives><headMask><directives>" } },
-						"run": { "properties": { "image": "<partImage>:run.<frame><customizeDirectives><headMask><directives>" } },
+						"walk": { "properties": { "image": "<partImage>:<direction>.walk.<frame><customizeDirectives><headMask><directives>" } },
+						"run": { "properties": { "image": "<partImage>:<direction>.run.<frame><customizeDirectives><headMask><directives>" } },
 
 						"jump": { "properties": { "image": "<partImage>:jump.<frame><customizeDirectives><headMask><directives>" } },
 						"fall": { "properties": { "image": "<partImage>:fall.<frame><customizeDirectives><headMask><directives>" } },
@@ -549,8 +550,8 @@
 						"sit": { "properties": { "image": "<partImage>:sit.<frame><customizeDirectives><headMask><directives>" } },
 						"lay": { "properties": { "image": "<partImage>:lay.<frame><customizeDirectives><headMask><directives>" } },
 
-						"walk": { "properties": { "image": "<partImage>:walk.<frame><customizeDirectives><headMask><directives>" } },
-						"run": { "properties": { "image": "<partImage>:run.<frame><customizeDirectives><headMask><directives>" } },
+						"walk": { "properties": { "image": "<partImage>:<direction>.walk.<frame><customizeDirectives><headMask><directives>" } },
+						"run": { "properties": { "image": "<partImage>:<direction>.run.<frame><customizeDirectives><headMask><directives>" } },
 
 						"jump": { "properties": { "image": "<partImage>:jump.<frame><customizeDirectives><headMask><directives>" } },
 						"fall": { "properties": { "image": "<partImage>:fall.<frame><customizeDirectives><headMask><directives>" } },
@@ -609,8 +610,8 @@
 						"sit": { "properties": { "image": "<partImage>:sit.<frame><cosmeticDirectives><directives>" } },
 						"lay": { "properties": { "image": "<partImage>:lay.<frame><cosmeticDirectives><directives>" } },
 
-						"walk": { "properties": { "image": "<partImage>:walk.<frame><cosmeticDirectives><directives>" } },
-						"run": { "properties": { "image": "<partImage>:run.<frame><cosmeticDirectives><directives>" } },
+						"walk": { "properties": { "image": "<partImage>:<direction>.walk.<frame><cosmeticDirectives><directives>" } },
+						"run": { "properties": { "image": "<partImage>:<direction>.run.<frame><cosmeticDirectives><directives>" } },
 
 						"jump": { "properties": { "image": "<partImage>:jump.<frame><cosmeticDirectives><directives>" } },
 						"fall": { "properties": { "image": "<partImage>:fall.<frame><cosmeticDirectives><directives>" } },
