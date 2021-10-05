@@ -1,113 +1,173 @@
 [
 	{
 		"op": "add",
-		"path": "/aliases/walk.6",
-		"value": "walk.4"
+		"path": "/aliases/sit.1",
+		"value": "chest.1"
 	},
 	{
 		"op": "add",
-		"path": "/aliases/walk.7",
-		"value": "walk.3"
+		"path": "/aliases/lay.1",
+		"value": "chest.1"
 	},
 	{
 		"op": "add",
-		"path": "/aliases/walk.8",
-		"value": "walk.2"
+		"path": "/aliases/jump.1",
+		"value": "chest.1"
 	},
 	{
 		"op": "add",
-		"path": "/aliases/run.6",
-		"value": "run.4"
+		"path": "/aliases/jump.2",
+		"value": "chest.1"
 	},
 	{
 		"op": "add",
-		"path": "/aliases/run.7",
-		"value": "run.3"
+		"path": "/aliases/jump.3",
+		"value": "chest.1"
 	},
 	{
 		"op": "add",
-		"path": "/aliases/run.8",
-		"value": "run.2"
+		"path": "/aliases/jump.4",
+		"value": "chest.1"
+	},
+	{
+		"op": "add",
+		"path": "/aliases/fall.1",
+		"value": "chest.1"
+	},
+	{
+		"op": "add",
+		"path": "/aliases/fall.2",
+		"value": "chest.1"
+	},
+	{
+		"op": "add",
+		"path": "/aliases/fall.3",
+		"value": "chest.1"
+	},
+	{
+		"op": "add",
+		"path": "/aliases/fall.4",
+		"value": "chest.1"
+	},
+	{
+		"op": "add",
+		"path": "/aliases/swimIdle.1",
+		"value": "swim"
+	},
+	{
+		"op": "add",
+		"path": "/aliases/swim.1",
+		"value": "swim"
+	},
+	{
+		"op": "add",
+		"path": "/aliases/swim.2",
+		"value": "swim"
+	},
+	{
+		"op": "add",
+		"path": "/aliases/swim.3",
+		"value": "swim"
+	},
+	{
+		"op": "add",
+		"path": "/aliases/swim.4",
+		"value": "swim"
+	},
+	{
+		"op": "add",
+		"path": "/aliases/swim.5",
+		"value": "swim"
+	},
+	{
+		"op": "add",
+		"path": "/aliases/swim.6",
+		"value": "swim"
+	},
+	{
+		"op": "add",
+		"path": "/aliases/swim.7",
+		"value": "swim"
 	},
 	{
 		"op": "add",
 		"path": "/aliases/1.run.1",
-		"value": "run.1"
+		"value": "run"
 	},
 	{
 		"op": "add",
 		"path": "/aliases/1.run.2",
-		"value": "run.2"
+		"value": "run"
 	},
 	{
 		"op": "add",
 		"path": "/aliases/1.run.3",
-		"value": "run.3"
+		"value": "run"
 	},
 	{
 		"op": "add",
 		"path": "/aliases/1.run.4",
-		"value": "run.4"
+		"value": "run"
 	},
 	{
 		"op": "add",
 		"path": "/aliases/1.run.5",
-		"value": "run.5"
+		"value": "run"
 	},
 	{
 		"op": "add",
 		"path": "/aliases/1.run.6",
-		"value": "run.6"
+		"value": "run"
 	},
 	{
 		"op": "add",
 		"path": "/aliases/1.run.7",
-		"value": "run.7"
+		"value": "run"
 	},
 	{
 		"op": "add",
 		"path": "/aliases/1.run.8",
-		"value": "run.8"
+		"value": "run"
 	},
 	{
 		"op": "add",
 		"path": "/aliases/1.walk.1",
-		"value": "walk.1"
+		"value": "chest.1"
 	},
 	{
 		"op": "add",
 		"path": "/aliases/1.walk.2",
-		"value": "walk.2"
+		"value": "chest.1"
 	},
 	{
 		"op": "add",
 		"path": "/aliases/1.walk.3",
-		"value": "walk.3"
+		"value": "chest.1"
 	},
 	{
 		"op": "add",
 		"path": "/aliases/1.walk.4",
-		"value": "walk.4"
+		"value": "chest.1"
 	},
 	{
 		"op": "add",
 		"path": "/aliases/1.walk.5",
-		"value": "walk.5"
+		"value": "chest.1"
 	},
 	{
 		"op": "add",
 		"path": "/aliases/1.walk.6",
-		"value": "walk.6"
+		"value": "chest.1"
 	},
 	{
 		"op": "add",
 		"path": "/aliases/1.walk.7",
-		"value": "walk.7"
+		"value": "chest.1"
 	},
 	{
 		"op": "add",
 		"path": "/aliases/1.walk.8",
-		"value": "walk.8"
+		"value": "chest.1"
 	},
 	{
 		"op": "add",

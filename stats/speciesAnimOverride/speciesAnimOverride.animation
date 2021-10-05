@@ -45,14 +45,6 @@
 
 				}
 			},
-			"chestState": {
-				"default": "idle",
-				"states": {
-					"none": { "frames": 1, "cycle": 1, "mode": "end", "priority": -1 },
-
-					"idle": { "frames": 1, "cycle": 1, "mode": "end", "priority": 0 }
-				}
-			},
 			"armsState": {
 				"default": "idle",
 				"states": {
@@ -242,14 +234,57 @@
 			"chest_cosmetic": {
 				"properties": {
 					"centered": true,
-					"zLevel": 0.1,
+					"zLevel": 0.2,
 					"transformationGroups": ["flip", "armsbob"]
 				},
 				"partStates": {
-					"chestState": {
+					"bodyState": {
 						"none": { "properties": {} },
 
-						"idle": { "properties": { "image": "<partImage>:idle.<bodyPersonality><cosmeticDirectives><directives>" } }
+						"idle": { "properties": { "image": "<partImage>:idle.<bodyPersonality><cosmeticDirectives><directives>" } },
+
+						"duck": { "properties": { "image": "<partImage>:duck.<frame><cosmeticDirectives><directives>" } },
+						"sit": { "properties": { "image": "<partImage>:sit.<frame><cosmeticDirectives><directives>" } },
+						"lay": { "properties": { "image": "<partImage>:lay.<frame><cosmeticDirectives><directives>" } },
+
+						"walk": { "properties": { "image": "<partImage>:<direction>.walk.<frame><cosmeticDirectives><directives>" } },
+						"run": { "properties": { "image": "<partImage>:<direction>.run.<frame><cosmeticDirectives><directives>" } },
+
+						"jump": { "properties": { "image": "<partImage>:jump.<frame><cosmeticDirectives><directives>" } },
+						"fall": { "properties": { "image": "<partImage>:fall.<frame><cosmeticDirectives><directives>" } },
+
+						"swim": { "properties": { "image": "<partImage>:swim.<frame><cosmeticDirectives><directives>" } },
+						"swimIdle": { "properties": { "image": "<partImage>:swimIdle.<frame><cosmeticDirectives><directives>" } }
+
+					}
+				}
+			},
+
+			"back_cosmetic": {
+				"properties": {
+					"centered": true,
+					"zLevel": -0.1,
+					"transformationGroups": ["flip", "armsbob"]
+				},
+				"partStates": {
+					"bodyState": {
+						"none": { "properties": {} },
+
+						"idle": { "properties": { "image": "<partImage>:idle.<bodyPersonality><cosmeticDirectives><directives>" } },
+
+						"duck": { "properties": { "image": "<partImage>:duck.<frame><cosmeticDirectives><directives>" } },
+						"sit": { "properties": { "image": "<partImage>:sit.<frame><cosmeticDirectives><directives>" } },
+						"lay": { "properties": { "image": "<partImage>:lay.<frame><cosmeticDirectives><directives>" } },
+
+						"walk": { "properties": { "image": "<partImage>:<direction>.walk.<frame><cosmeticDirectives><directives>" } },
+						"run": { "properties": { "image": "<partImage>:<direction>.run.<frame><cosmeticDirectives><directives>" } },
+
+						"jump": { "properties": { "image": "<partImage>:jump.<frame><cosmeticDirectives><directives>" } },
+						"fall": { "properties": { "image": "<partImage>:fall.<frame><cosmeticDirectives><directives>" } },
+
+						"swim": { "properties": { "image": "<partImage>:swim.<frame><cosmeticDirectives><directives>" } },
+						"swimIdle": { "properties": { "image": "<partImage>:swimIdle.<frame><cosmeticDirectives><directives>" } }
+
 					}
 				}
 			},
@@ -371,7 +406,7 @@
 			"frontarms_rotation_cosmetic": {
 				"properties": {
 					"centered": true,
-					"zLevel": 3,
+					"zLevel": 3.1,
 					"transformationGroups": ["flip", "frontarmsrotation", "armsbob"]
 				},
 				"partStates": {
