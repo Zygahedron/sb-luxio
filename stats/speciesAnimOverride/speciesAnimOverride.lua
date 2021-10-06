@@ -25,7 +25,7 @@ function initAfterInit()
 	self.speciesData = root.assetJson("/humanoid/"..self.species.."/speciesAnimOverride.config")
 
 	for partname, filepath in pairs(self.speciesData.partImages) do
-		animator.setPartTag(partname, "partImage", filepath)
+		animator.setPartTag(partname, "partImage", sb.replaceTags(filepath, { gender = self.gender }))
 	end
 	self.inited = true
 end
@@ -65,12 +65,15 @@ function loopedMessage(name, eid, message, args, callback, failCallback)
 end
 
 function getHandItems()
-	local primaryItem = world.entityHandItemDescriptor(entity.id(), "primary")
-	local altItem = world.entityHandItemDescriptor(entity.id(), "alt")
-
+	getHandItem("primary")
+	getHandItem("alt")
 end
 
-function getHandItem()
+function getHandItem(hand)
+	local itemDescriptor = world.entityHandItemDescriptor(entity.id(), hand)
+	if itemDescriptor ~= nil and (not itemDescriptor.parameters or not itemDescriptor.parameters.itemHasOverrideLockScript) then
+		loopedMessage("giveItemScript"..hand, entity.id(), "giveHeldItemOverrideLockScript", {itemDescriptor} )
+	end
 end
 
 setCosmetic = {}

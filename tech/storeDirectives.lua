@@ -10,7 +10,6 @@ local curDirectives = ""
 local curHidden = ""
 
 function init()
-	sb.logInfo("storedirectives")
 	techUUID = sb.makeUuid()
 	oldSetParentDirectives = tech.setParentDirectives
 	tech.setParentDirectives = tech_setParentDirectives
